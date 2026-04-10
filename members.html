@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URAM-IITD | Members</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f3efe8;
+      --surface: rgba(255, 255, 255, 0.76);
+      --surface-strong: rgba(255, 255, 255, 0.9);
+      --ink: #162126;
+      --muted: #5a6a70;
+      --accent: #0e646d;
+      --accent-deep: #0a4750;
+      --highlight: #db8a3d;
+      --line: rgba(22, 33, 38, 0.12);
+      --shadow: 0 22px 80px rgba(22, 33, 38, 0.12);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --container: min(1180px, calc(100vw - 40px));
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(219, 138, 61, 0.16), transparent 26%),
+        radial-gradient(circle at 92% 18%, rgba(14, 100, 109, 0.14), transparent 30%),
+        linear-gradient(180deg, #f8f5ef 0%, #f2ede5 100%);
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-shell {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 24px 0 70px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      margin-bottom: 24px;
+      backdrop-filter: blur(18px);
+    }
+
+    .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px 22px;
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 220px;
+    }
+
+    .brand-kicker {
+      font-size: 0.76rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .brand-name {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      line-height: 1;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .nav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      color: var(--muted);
+      transition: 0.25s ease;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible,
+    .nav a.active {
+      background: rgba(14, 100, 109, 0.1);
+      color: var(--accent-deep);
+      outline: none;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(320px, 0.92fr) minmax(340px, 1.08fr);
+      gap: 28px;
+      align-items: stretch;
+      margin-bottom: 32px;
+    }
+
+    .hero-media,
+    .hero-copy,
+    .section-shell,
+    .member-row,
+    .alumni-grid article,
+    .contact-band {
+      background: var(--surface-strong);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-media {
+      position: relative;
+      min-height: 560px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      padding: 24px;
+      background:
+        linear-gradient(160deg, rgba(14, 100, 109, 0.92), rgba(11, 51, 56, 0.9)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent);
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-media::before,
+    .hero-media::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .hero-media::before {
+      width: 240px;
+      height: 240px;
+      right: -30px;
+      top: -40px;
+      background: rgba(219, 138, 61, 0.32);
+      filter: blur(4px);
+    }
+
+    .hero-media::after {
+      width: 180px;
+      height: 180px;
+      left: -22px;
+      bottom: 42px;
+      background: rgba(255, 255, 255, 0.1);
+      filter: blur(4px);
+    }
+
+    .image-placeholder {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      min-height: 500px;
+      border-radius: 28px;
+      border: 1.5px dashed rgba(255, 255, 255, 0.52);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02)),
+        radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.16), transparent 24%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px;
+    }
+
+    .image-tag {
+      align-self: flex-start;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      color: #f7f5f0;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .image-title {
+      max-width: 240px;
+      margin: 0;
+      color: #ffffff;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.04;
+    }
+
+    .image-note {
+      max-width: 280px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.84);
+      line-height: 1.6;
+      font-size: 0.96rem;
+    }
+
+    .hero-copy {
+      border-radius: var(--radius-xl);
+      padding: clamp(28px, 4vw, 44px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow,
+    .section-label {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-copy p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1.03rem;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 8px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-points li {
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .point-label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+
+    .point-text {
+      display: block;
+      color: var(--ink);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .section-shell {
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      margin: 0 0 16px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      line-height: 1.05;
+    }
+
+    .section-shell > p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 70ch;
+    }
+
+    .member-list {
+      display: grid;
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .member-row {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+      gap: 24px;
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      align-items: stretch;
+    }
+
+    .member-visual {
+      min-height: 280px;
+      border-radius: 22px;
+      padding: 18px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent),
+        linear-gradient(145deg, #1c5660 0%, #10252b 100%);
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .member-visual .image-placeholder {
+      min-height: 240px;
+      padding: 22px;
+    }
+
+    .member-visual .image-title {
+      max-width: 180px;
+      font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+    }
+
+    .member-visual .image-note {
+      max-width: 190px;
+      font-size: 0.9rem;
+    }
+
+    .member-copy h3 {
+      margin: 0 0 6px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.75rem, 2.4vw, 2.2rem);
+      line-height: 1.06;
+    }
+
+    .member-role {
+      margin: 0 0 16px;
+      color: var(--highlight);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 800;
+      font-size: 0.74rem;
+    }
+
+    .member-copy p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .member-meta {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 24px;
+      color: var(--ink);
+      font-size: 0.96rem;
+    }
+
+    .member-meta strong {
+      color: var(--accent-deep);
+    }
+
+    .alumni-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .alumni-grid article {
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .alumni-grid h3 {
+      margin: 0 0 10px;
+      font-family: "Playfair Display", serif;
+      font-size: 1.7rem;
+      line-height: 1.08;
+    }
+
+    .alumni-grid p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .contact-band {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: center;
+      border-radius: var(--radius-lg);
+      padding: 28px 30px;
+    }
+
+    .contact-band h2 {
+      margin: 0 0 10px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+    }
+
+    .contact-band p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .contact-link {
+      justify-self: end;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus-visible {
+      transform: translateY(-2px);
+      background: var(--accent-deep);
+      outline: none;
+    }
+
+    .footer {
+      padding: 18px 0 8px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: reveal 0.8s ease forwards;
+    }
+
+    .reveal:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .reveal:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero,
+      .member-row,
+      .contact-band {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-points,
+      .alumni-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-link {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page-shell {
+        width: min(100vw - 24px, 100%);
+        padding-top: 14px;
+      }
+
+      .header-bar,
+      .hero-copy,
+      .section-shell,
+      .member-row,
+      .contact-band {
+        padding: 22px;
+      }
+
+      .hero-media {
+        min-height: 420px;
+        padding: 18px;
+      }
+
+      .image-placeholder {
+        min-height: 380px;
+      }
+
+      .nav {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="header-bar">
+        <div class="brand">
+          <span class="brand-kicker">IIT Delhi Research Group</span>
+          <p class="brand-name">URAM-IITD</p>
+        </div>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#research">Projects</a>
+          <a href="index.html#research">Teaching</a>
+          <a href="index.html#forecast">Publications</a>
+          <a class="active" href="members.html">Members</a>
+          <a href="index.html#team">Collaborations</a>
+          <a href="index.html#team">Current Openings</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-media reveal">
+          <div class="image-placeholder" aria-label="Members page image placeholder">
+            <span class="image-tag">Insert Image</span>
+            <div>
+              <h2 class="image-title">Add a team photograph or lab image here</h2>
+              <p class="image-note">Use this space for a group portrait, lab activity image, or a generated visual that reflects the research team.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Members</p>
+          <h1>Meet the team behind URAM-IITD.</h1>
+          <p>
+            The Urban and Regional Air Quality Management group brings together faculty, research scholars, and alumni working across air-quality modeling, environmental systems, health studies, and policy-facing research.
+          </p>
+          <ul class="hero-points">
+            <li>
+              <span class="point-label">Faculty</span>
+              <span class="point-text">Senior academic leadership across air quality and environmental engineering</span>
+            </li>
+            <li>
+              <span class="point-label">Scholars</span>
+              <span class="point-text">Research spanning modeling, health impact, climate policy, and machine learning</span>
+            </li>
+            <li>
+              <span class="point-label">Alumni</span>
+              <span class="point-text">Graduates now contributing to research and academic institutions worldwide</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-shell reveal">
+        <p class="section-label">Faculty</p>
+        <h2 class="section-title">Experienced guidance across environmental research and practice.</h2>
+        <p>
+          The faculty members associated with URAM-IITD bring deep expertise in air-quality modelling, environmental systems, public policy, and engineering practice, helping shape both research direction and real-world impact.
+        </p>
+
+        <div class="member-list">
+          <article class="member-row">
+            <div class="member-visual">
+              <div class="image-placeholder">
+                <span class="image-tag">Insert Image</span>
+                <div>
+                  <h2 class="image-title">Prof. Mukesh Khare</h2>
+                  <p class="image-note">Add faculty portrait here.</p>
+                </div>
+              </div>
+            </div>
+            <div class="member-copy">
+              <h3>Prof. Mukesh Khare</h3>
+              <p class="member-role">Faculty Member</p>
+              <p>
+                Professor Mukesh Khare is a Fellow of the Institution of Engineers India and Fellow of the Wessex Institute of Great Britain. He is a Chartered Engineer and obtained his Ph.D. in the Faculty of Engineering from Newcastle University, UK.
+              </p>
+              <p>
+                With a specialization in air-quality modelling, his experience spans research and development studies, teaching, consulting, modelling, and editorial activities. He has authored more than 200 research publications and serves on national-level policy and advisory bodies, including the High Level Task Force at the Prime Minister's Office.
+              </p>
+              <div class="member-meta">
+                <span><strong>Email:</strong> mukeshk@civil.iitd.ac.in</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="member-row">
+            <div class="member-visual">
+              <div class="image-placeholder">
+                <span class="image-tag">Insert Image</span>
+                <div>
+                  <h2 class="image-title">Prof. Arvind Kumar Nema</h2>
+                  <p class="image-note">Add faculty portrait here.</p>
+                </div>
+              </div>
+            </div>
+            <div class="member-copy">
+              <h3>Prof. Arvind Kumar Nema</h3>
+              <p class="member-role">Faculty Member</p>
+              <p>
+                Prof. Arvind K. Nema has 12 years of professional experience in environmental practices for integrated waste management, with expertise in simulation and optimization of environmental systems and environmental impact assessment.
+              </p>
+              <p>
+                He obtained his doctorate from the Indian Institute of Technology, Mumbai, has more than 50 publications to his credit, and also serves as the Dean of Student Affairs at IIT Delhi.
+              </p>
+              <div class="member-meta">
+                <span><strong>Email:</strong> aknema@civil.iitd.ac.in</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="member-row">
+            <div class="member-visual">
+              <div class="image-placeholder">
+                <span class="image-tag">Insert Image</span>
+                <div>
+                  <h2 class="image-title">Dr. Sri Harsha Kota</h2>
+                  <p class="image-note">Add faculty portrait here.</p>
+                </div>
+              </div>
+            </div>
+            <div class="member-copy">
+              <h3>Dr. Sri Harsha Kota</h3>
+              <p class="member-role">Associate Professor</p>
+              <p>
+                Dr. Sri Harsha Kota is an Associate Professor in the Department of Civil Engineering at IIT Delhi. Earlier, from August 2014 to May 2018, he served as Assistant Professor at the Department of Civil Engineering at IIT Delhi.
+              </p>
+              <p>
+                He has more than ten years of research experience in air-quality modeling and monitoring. His work focuses on regional and urban air-quality modeling, emission factors, air purification, air-quality management, air pollution and health, indoor air pollution, and source apportionment. He collaborates actively with scientists in India, the US, Europe, and China.
+              </p>
+              <div class="member-meta">
+                <span><strong>Email:</strong> harshakota@civil.iitd.ac.in</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell reveal">
+        <p class="section-label">Research Scholars</p>
+        <h2 class="section-title">Current scholars advancing the group's research themes.</h2>
+        <p>
+          The current scholars contribute to interdisciplinary work across urban air pollution, health outcomes, modeling systems, climate policy, and environmental engineering applications.
+        </p>
+
+        <div class="member-list">
+          <article class="member-row">
+            <div class="member-visual">
+              <div class="image-placeholder">
+                <span class="image-tag">Insert Image</span>
+                <div>
+                  <h2 class="image-title">Mr. Shubham Sharma</h2>
+                  <p class="image-note">Add scholar portrait here.</p>
+                </div>
+              </div>
+            </div>
+            <div class="member-copy">
+              <h3>Mr. Shubham Sharma</h3>
+              <p class="member-role">Research Scholar</p>
+              <p>
+                Shubham's doctoral research examines associations between PM2.5 and morbidity and mortality in Delhi under the supervision of Dr. Sri Harsha Kota and Dr. Mina Chandra. He also worked on an integrated study of air pollutant sources in Delhi during his master's at IIT Delhi.
+              </p>
+              <p>
+                He specializes in urban and regional air-pollution modelling and health studies, and is involved in research collaborations with scientists in India, Europe, and China.
+              </p>
+              <div class="member-meta">
+                <span><strong>Supervisors:</strong> Dr. Sri Harsha Kota and Dr. Mina Chandra</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="member-row">
+            <div class="member-visual">
+              <div class="image-placeholder">
+                <span class="image-tag">Insert Image</span>
+                <div>
+                  <h2 class="image-title">Mr. Arpit Katiyar</h2>
+                  <p class="image-note">Add scholar portrait here.</p>
+                </div>
+              </div>
+            </div>
+            <div class="member-copy">
+              <h3>Mr. Arpit Katiyar</h3>
+              <p class="member-role">Research Scholar</p>
+              <p>
+                Arpit works on air-quality models with a specific focus on WRF-Chem. He also contributes to emission inventory development and the estimation of non-local emissions affecting air quality.
+              </p>
+              <p>
+                He completed his B.Tech in Civil Engineering from IIT Delhi and M.Tech in Environmental Engineering and Management from IIT Kanpur, and is part of the URAM-IIT Delhi group.
+              </p>
+              <div class="member-meta">
+                <span><strong>Supervisor:</strong> Dr. Sri Harsha Kota</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="member-row">
+            <div class="member-visual">
+              <div class="image-placeholder">
+                <span class="image-tag">Insert Image</span>
+                <div>
+                  <h2 class="image-title">Mr. Amit Munjal</h2>
+                  <p class="image-note">Add scholar portrait here.</p>
+                </div>
+              </div>
+            </div>
+            <div class="member-copy">
+              <h3>Mr. Amit Munjal</h3>
+              <p class="member-role">Research Scholar</p>
+              <p>
+                Amit's research focuses on practical challenges related to the National Highways sector in India. He completed his B.Tech in Civil Engineering from NIT Kurukshetra and later joined the M.Tech program at IIT Delhi.
+              </p>
+              <p>
+                He has worked in the Public Health Engineering Department, Government of Haryana, and is currently with the Ministry of Road Transport and Highways, Government of India, which sponsors his PhD.
+              </p>
+              <div class="member-meta">
+                <span><strong>Supervisors:</strong> Dr. Sri Harsha Kota and Prof. A. K. Nema</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="member-row">
+            <div class="member-visual">
+              <div class="image-placeholder">
+                <span class="image-tag">Insert Image</span>
+                <div>
+                  <h2 class="image-title">Mr. Yash Jain</h2>
+                  <p class="image-note">Add scholar portrait here.</p>
+                </div>
+              </div>
+            </div>
+            <div class="member-copy">
+              <h3>Mr. Yash Jain</h3>
+              <p class="member-role">Research Scholar</p>
+              <p>
+                Yash works on air-quality monitoring, modelling, and health impact assessment. He completed his graduation in Biotechnology from Amity University and a Master's in Environment Management from GGSIPU Delhi.
+              </p>
+              <p>
+                He is an external project-sponsored PhD candidate under the guidance of Dr. Sri Harsha Kota and Prof. Vivek Kumar.
+              </p>
+              <div class="member-meta">
+                <span><strong>Supervisors:</strong> Prof. Vivek Kumar and Dr. Sri Harsha Kota</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="member-row">
+            <div class="member-visual">
+              <div class="image-placeholder">
+                <span class="image-tag">Insert Image</span>
+                <div>
+                  <h2 class="image-title">Ms. Pratibha Anand</h2>
+                  <p class="image-note">Add scholar portrait here.</p>
+                </div>
+              </div>
+            </div>
+            <div class="member-copy">
+              <h3>Ms. Pratibha Anand</h3>
+              <p class="member-role">Research Scholar</p>
+              <p>
+                Pratibha is a botanist researching the impact of air pollution on plants. She has also contributed to the GCRF-funded project "A Systems Approach to Air Pollution in Delhi" under the supervision of Prof. Mukesh Khare at IIT Delhi.
+              </p>
+              <p>
+                She completed her B.Sc. (Hons.) in Botany from Miranda House, University of Delhi, and her M.Sc. in Environment Management from GGSIPU Delhi. She is a UGC-NET-JRF sponsored candidate.
+              </p>
+              <div class="member-meta">
+                <span><strong>Supervisors:</strong> Dr. Sri Harsha Kota and Prof. Mukesh Khare</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="member-row">
+            <div class="member-visual">
+              <div class="image-placeholder">
+                <span class="image-tag">Insert Image</span>
+                <div>
+                  <h2 class="image-title">Ms. Anjali Bansal</h2>
+                  <p class="image-note">Add scholar portrait here.</p>
+                </div>
+              </div>
+            </div>
+            <div class="member-copy">
+              <h3>Ms. Anjali Bansal</h3>
+              <p class="member-role">Research Scholar</p>
+              <p>
+                Anjali's research is based on applications of machine learning in the wastewater engineering sector. She completed her M.Tech in Environmental Engineering from MNIT Jaipur and currently works as a Design Engineer at Ramboll India Pvt. Ltd.
+              </p>
+              <p>
+                She brings 5.5 years of professional experience to her research work.
+              </p>
+              <div class="member-meta">
+                <span><strong>Supervisor:</strong> Dr. Sri Harsha Kota</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="member-row">
+            <div class="member-visual">
+              <div class="image-placeholder">
+                <span class="image-tag">Insert Image</span>
+                <div>
+                  <h2 class="image-title">Mr. Diljit Kumar Nayak</h2>
+                  <p class="image-note">Add scholar portrait here.</p>
+                </div>
+              </div>
+            </div>
+            <div class="member-copy">
+              <h3>Mr. Diljit Kumar Nayak</h3>
+              <p class="member-role">Research Scholar</p>
+              <p>
+                Diljit studies policy formulation for climate-change mitigation under the National Clean Air Programme by examining variation in land use and land cover across the Indian region.
+              </p>
+              <p>
+                He received his Master's from the Center of Atmospheric Sciences, IIT Delhi.
+              </p>
+              <div class="member-meta">
+                <span><strong>Supervisors:</strong> Dr. Gazala Habib and Dr. Sri Harsha Kota</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell reveal">
+        <p class="section-label">Alumni</p>
+        <h2 class="section-title">Former researchers continuing their work beyond the group.</h2>
+        <p>
+          URAM-IITD alumni continue to contribute to air-quality and environmental research through academic and research institutions in India and abroad.
+        </p>
+
+        <div class="alumni-grid">
+          <article>
+            <h3>Dr. Shovan Kumar Sahu</h3>
+            <p>Thesis Title: Estimation of contributions from potential source regions to mortality associated with PM2.5 in Indian cities.</p>
+            <p>Currently PDF at Tsinghua University.</p>
+          </article>
+          <article>
+            <h3>Dr. Rajyalakshmi Garaga</h3>
+            <p>Thesis Title: Identifying the sources of wet deposition in urban and dry deposition in urban and rural residential areas of Assam.</p>
+            <p>Currently faculty at NIT Andhra Pradesh.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-band reveal" id="contact">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2>Get in touch with the URAM-IITD group.</h2>
+          <p>For research inquiries, collaborations, and academic communication, reach out directly by email.</p>
+        </div>
+        <a class="contact-link" href="mailto:harshakota@iitd.ac.in">harshakota@iitd.ac.in</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      URAM-IITD members page rebuilt for GitHub Pages.
+    </footer>
+  </div>
+</body>
+</html>

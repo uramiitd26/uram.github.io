@@ -568,106 +568,83 @@
       }
     }
 
+
+   @media (max-width: 760px) {
+     .page-shell {
+       width: min(100vw - 20px, 100%);
+       padding-top: 10px;
+     }
    
-
-              /* --- Desktop: Hide the menu button --- */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 30;
-}
-
-.menu-toggle span {
-  width: 100%;
-  height: 3px;
-  background-color: var(--accent);
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
-/* --- Mobile Styles --- */
-@media (max-width: 1024px) {
-  .menu-toggle {
-    display: flex; /* Show the lines on mobile */
-  }
-
-  .nav {
-    display: none; /* Hide the links by default */
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--surface-strong);
-    padding: 20px;
-    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-    border: 1px solid var(--line);
-    box-shadow: var(--shadow);
-    gap: 10px;
-  }
-
-  /* When the 'active' class is added via JS */
-  .nav.active {
-    display: flex;
-  }
-
-  .nav a {
-    width: 100%;
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .nav a:last-child {
-    border-bottom: none;
-  }
-  
-  /* Simple animation for the hamburger to 'X' */
-  .menu-toggle.open span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-  .menu-toggle.open span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle.open span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-}
+     /* 1. Slim down the header bar padding */
+     .header-bar {
+       padding: 12px 16px;
+       flex-direction: column; /* Stack Brand and Nav vertically */
+       align-items: flex-start;
+       gap: 12px;
+     }
+   
+     .brand {
+       min-width: unset;
+     }
+   
+     /* 2. Shrink brand text sizes */
+     .brand-kicker {
+       font-size: 0.65rem;
+     }
+     .brand-name {
+       font-size: 1.2rem;
+     }
+   
+     /* 3. Force Nav to stay on ONE line with horizontal scroll */
+     .nav {
+       width: 100%;
+       justify-content: flex-start;
+       flex-wrap: nowrap; /* IMPORTANT: Prevents the "half screen" wrap */
+       overflow-x: auto;
+       -webkit-overflow-scrolling: touch;
+       padding-bottom: 4px; /* Space for a scroll bar if it appears */
+       margin: 0 -4px; /* Slight offset for better alignment */
+     }
+   
+     /* 4. Ensure links don't break and stay compact */
+     .nav a {
+       white-space: nowrap; /* Prevents text from breaking into two lines */
+       padding: 6px 12px;
+       font-size: 0.85rem;
+       background: rgba(14, 100, 109, 0.05); /* Light pill background for visibility */
+     }
+   
+     /* Optional: Hide scrollbar but keep functionality for a cleaner look */
+     .nav::-webkit-scrollbar {
+       display: none;
+     }
+     .nav {
+       -ms-overflow-style: none;
+       scrollbar-width: none;
+     }
+   }
   </style>
 </head>
 <body>
   <div class="page-shell">
-            <header class="site-header">
-              <div class="header-bar">
-                <div class="brand">
-                  <span class="brand-kicker">IIT Delhi Research Group</span>
-                  <p class="brand-name">URAM-IITD</p>
-                </div>
-                
-                <button class="menu-toggle" aria-label="Toggle navigation">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </button>
-            
-                <nav class="nav" id="mainNav" aria-label="Primary navigation">
-                  <a href="index.html">Home</a>
-                  <a href="projects.html">Projects</a>
-                  <a href="#research">Teaching</a>
-                  <a href="#forecast">Publications</a>
-                  <a href="members.html">Members</a>
-                  <a href="#team">Collaborations</a>
-                  <a href="#team">Current Openings</a>
-                  <a href="#contact">Contact</a>
-                </nav>
-              </div>
-            </header>
+    <header class="site-header">
+      <div class="header-bar">
+        <div class="brand">
+          <span class="brand-kicker">IIT Delhi Research Group</span>
+          <p class="brand-name">URAM-IITD</p>
+        </div>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="#research">Teaching</a>
+          <a href="#forecast">Publications</a>
+          <a href="members.html">Members</a>
+          <a href="#team">Collaborations</a>
+          <a href="#team">Current Openings</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
 
     <main>
       <section class="hero" id="home">
@@ -781,27 +758,5 @@
       </section>
     </main>
   </div>
-
-
-<script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
-
-  menuToggle.addEventListener('click', () => {
-    // This toggles the visibility of the menu
-    nav.classList.toggle('active');
-    
-    // This animates the hamburger lines into an 'X'
-    menuToggle.classList.toggle('open');
-  });
-
-  // Close menu when a link is clicked (useful for one-page scrolling)
-  document.querySelectorAll('.nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('active');
-      menuToggle.classList.remove('open');
-    });
-  });
-</script>
 </body>
 </html>

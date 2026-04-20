@@ -322,49 +322,15 @@
     }
 
     .member-visual {
-      flex: 0 0 260px; /* This keeps the image column a consistent width */
-      min-height: auto; 
-      background: none; 
-      padding: 0;
-      display: block;
+      min-height: 280px;
+      border-radius: 22px;
+      padding: 18px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent),
+        linear-gradient(145deg, #1c5660 0%, #10252b 100%);
+      display: flex;
+      align-items: flex-end;
     }
-
-    /* 2. Create a clean wrapper for the photo */
-  .image-wrapper {
-    width: 100%;
-    aspect-ratio: 4 / 5; /* Creates a consistent portrait shape */
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    background: #e5e7eb; /* Fallback color */
-    border: 1px solid var(--line);
-  }
-  
-  /* 3. The actual image styling */
-  .member-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This makes the photo fill the box without stretching */
-    display: block;
-  }
-  
-  /* 4. Ensure the row layout is clean */
-  .member-row {
-    display: flex; /* Using flex is easier for image + text alignment */
-    gap: 32px;
-    padding: 30px;
-    align-items: flex-start;
-  }
-
-/* 5. Mobile adjustment */
-@media (max-width: 1024px) {
-  .member-row {
-    flex-direction: column;
-  }
-  .member-visual {
-    width: 100%;
-    max-width: 300px; /* Prevents image from getting too big on mobile */
-  }
-}
 
     .member-visual .image-placeholder {
       min-height: 240px;
@@ -416,6 +382,50 @@
 
     .member-meta strong {
       color: var(--accent-deep);
+    }
+
+    .timeline-list,
+    .bullet-list {
+      margin: 0 0 14px;
+      padding-left: 20px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .timeline-list li + li,
+    .bullet-list li + li {
+      margin-top: 8px;
+    }
+
+    .stats-grid {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .stat-card {
+      border-radius: 16px;
+      padding: 16px;
+      background: rgba(14, 100, 109, 0.06);
+      border: 1px solid rgba(14, 100, 109, 0.14);
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--accent-deep);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
     }
 
     .alumni-grid {
@@ -521,7 +531,8 @@
       }
 
       .hero-points,
-      .alumni-grid {
+      .alumni-grid,
+      .stats-grid {
         grid-template-columns: 1fr;
       }
 
@@ -559,9 +570,6 @@
         -webkit-overflow-scrolling: touch;
       }
     }
-
-
-  <link rel="stylesheet" href="style.css">
   </style>
 </head>
 <body>
@@ -572,22 +580,15 @@
           <span class="brand-kicker">IIT Delhi Research Group</span>
           <p class="brand-name">URAM-IITD</p>
         </div>
-        
-        <button class="menu-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-    
-        <nav class="nav">
+        <nav class="nav" aria-label="Primary navigation">
           <a href="index.html">Home</a>
           <a href="projects.html">Projects</a>
-          <a href="teaching.html">Teaching</a>
-          <a href="publications.html">Publications</a>
-          <a href="members.html">Members</a>
-          <a href="collabrations.html">Collaborations</a>
-          <a href="current-openings.html">Current Openings</a>
-          <a href="contact.html">Contact</a>
+          <a href="index.html#research">Teaching</a>
+          <a href="index.html#forecast">Publications</a>
+          <a class="active" href="members.html">Members</a>
+          <a href="index.html#team">Collaborations</a>
+          <a href="index.html#team">Current Openings</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
@@ -613,15 +614,15 @@
           <ul class="hero-points">
             <li>
               <span class="point-label">Faculty</span>
-              <span class="point-text">Senior academic leadership across air quality and environmental engineering</span>
+              <span class="point-text">Professor-led research in air quality, health, and environmental systems</span>
             </li>
             <li>
               <span class="point-label">Scholars</span>
-              <span class="point-text">Research spanning modeling, health impact, climate policy, and machine learning</span>
+              <span class="point-text">Doctoral and master's researchers across modeling, climate, and policy</span>
             </li>
             <li>
-              <span class="point-label">Alumni</span>
-              <span class="point-text">Graduates now contributing to research and academic institutions worldwide</span>
+              <span class="point-label">Mentoring</span>
+              <span class="point-text">Postdoctoral, doctoral, master's, and undergraduate mentorship pathways</span>
             </li>
           </ul>
         </div>
@@ -637,35 +638,42 @@
         <div class="member-list">
           <article class="member-row">
             <div class="member-visual">
-              <div class="image-wrapper">
-                <img src="images/mukesh.jpg" alt="Prof. Mukesh Khare" class="member-img">
+              <div class="image-placeholder">
+                <span class="image-tag">Insert Image</span>
+                <div>
+                  <h2 class="image-title">Prof. Mukesh Khare</h2>
+                  <p class="image-note">Add faculty portrait here.</p>
+                </div>
               </div>
             </div>
             <div class="member-copy">
               <h3>Prof. Mukesh Khare</h3>
-              <div class="member-bio">
-                <p>
-                  Professor Mukesh Khare is a Fellow of the Institution of Engineers India and Fellow of the Wessex Institute of Great Britain. He is a Chartered Engineer and obtained his Ph.D. in the Faculty of Engineering from Newcastle University, UK.
-                </p>
-                <p>
-                  With a specialization in air-quality modelling, his experience spans research and development studies, teaching, consulting, modelling, and editorial activities. He has authored more than 200 research publications and serves on national-level policy and advisory bodies, including the High Level Task Force at the Prime Minister's Office.
-                </p>
-              </div>
+              <p class="member-role">Faculty Member</p>
+              <p>
+                Professor Mukesh Khare is a Fellow of the Institution of Engineers India and Fellow of the Wessex Institute of Great Britain. He is a Chartered Engineer and obtained his Ph.D. in the Faculty of Engineering from Newcastle University, UK.
+              </p>
+              <p>
+                With a specialization in air-quality modelling, his experience spans research and development studies, teaching, consulting, modelling, and editorial activities. He has authored more than 200 research publications and serves on national-level policy and advisory bodies, including the High Level Task Force at the Prime Minister's Office.
+              </p>
               <div class="member-meta">
                 <span><strong>Email:</strong> mukeshk@civil.iitd.ac.in</span>
               </div>
             </div>
           </article>
-            
 
           <article class="member-row">
             <div class="member-visual">
-              <div class="image-wrapper">
-                <img src="images/akneema.png" alt="Prof. Arvind Kumar Nema" class="member-img">
+              <div class="image-placeholder">
+                <span class="image-tag">Insert Image</span>
+                <div>
+                  <h2 class="image-title">Prof. Arvind Kumar Nema</h2>
+                  <p class="image-note">Add faculty portrait here.</p>
+                </div>
               </div>
             </div>
             <div class="member-copy">
               <h3>Prof. Arvind Kumar Nema</h3>
+              <p class="member-role">Faculty Member</p>
               <p>
                 Prof. Arvind K. Nema has 12 years of professional experience in environmental practices for integrated waste management, with expertise in simulation and optimization of environmental systems and environmental impact assessment.
               </p>
@@ -680,24 +688,69 @@
 
           <article class="member-row">
             <div class="member-visual">
-              <div class="image-wrapper">
-                <img src="images/harsha_kota.jpg" alt="Prof. Sri Harsha Kota" class="member-img">
+              <div class="image-placeholder">
+                <span class="image-tag">Insert Image</span>
+                <div>
+                  <h2 class="image-title">Dr. Sri Harsha Kota</h2>
+                  <p class="image-note">Add faculty portrait here.</p>
+                </div>
               </div>
             </div>
             <div class="member-copy">
-              <h3>Prof. Sri Harsha Kota</h3>
+              <h3>Dr. Sri Harsha Kota</h3>
+              <p class="member-role">Professor | Chair Professor, CERCA</p>
               <p>
-                Dr. Sri Harsha Kota is an Associate Professor in the Department of Civil Engineering at IIT Delhi. Earlier, from August 2014 to May 2018, he served as Assistant Professor at the Department of Civil Engineering at IIT Delhi.
+                Dr. Sri Harsha Kota is Professor in the Department of Civil and Environmental Engineering at IIT Delhi (since February 2026) and Chair Professor at the Center for Excellence in Research in Clean Air (CERCA), IIT Delhi.
               </p>
               <p>
-                He has more than ten years of research experience in air-quality modeling and monitoring. His work focuses on regional and urban air-quality modeling, emission factors, air purification, air-quality management, air pollution and health, indoor air pollution, and source apportionment. He collaborates actively with scientists in India, the US, Europe, and China.
+                His prior appointments include Associate Professor at IIT Delhi (2021-2026), Assistant Professor at IIT Delhi (2018-2021), Assistant Professor at IIT Guwahati (2014-2018), and Visiting Professor at Louisiana State University, USA.
               </p>
+              <ul class="timeline-list">
+                <li><strong>Education:</strong> PhD (2014) and MS (2009), Texas A&amp;M University; BE Civil Engineering (2007), Osmania University</li>
+                <li><strong>Research Interests:</strong> Urban/regional air quality modeling, PM health burden, source apportionment, indoor air quality, and climate-air quality interactions</li>
+                <li><strong>Publication Metrics:</strong> Citations 4432, h-index 33, i10-index 54</li>
+              </ul>
               <div class="member-meta">
-                <span><strong>Email:</strong> harshakota@civil.iitd.ac.in</span>
+                <span><strong>Email:</strong> harshakota@iitd.ac.in</span>
+                <span><strong>Website:</strong> web.iitd.ac.in/~harshakota/</span>
               </div>
             </div>
           </article>
         </div>
+      </section>
+
+      <section class="section-shell reveal">
+        <p class="section-label">Mentoring</p>
+        <h2 class="section-title">Research mentoring and academic training ecosystem.</h2>
+        <p>
+          The group has trained researchers across postdoctoral, doctoral, master's, and undergraduate levels, with many alumni now contributing to academia, policy institutions, and applied research organizations.
+        </p>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Postdoctoral Researchers</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">18+</span>
+            <span class="stat-label">Doctoral Researchers</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">40+</span>
+            <span class="stat-label">Masters and UG Researchers</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell reveal">
+        <p class="section-label">Recognitions</p>
+        <h2 class="section-title">Awards, leadership, and professional service.</h2>
+        <ul class="bullet-list">
+          <li>INAE Young Engineer Award (2021) and Associate Member of the Indian National Academy of Engineering</li>
+          <li>Chair Professorship, CERCA IIT Delhi (2020-2024 and 2025 onwards)</li>
+          <li>Associate Dean (Infrastructure), IIT Delhi (2023 onwards)</li>
+          <li>Editorial roles in Frontiers in Sustainable Cities, Journal of Hazardous Materials, and ASCE Journal of Hazardous, Toxic, and Radioactive Waste</li>
+          <li>Member Secretary in the CAQM consultative committee on techno-managerial solutions for C&amp;D pollution abatement in NCR</li>
+        </ul>
       </section>
 
       <section class="section-shell reveal">
@@ -915,8 +968,10 @@
         <a class="contact-link" href="mailto:harshakota@iitd.ac.in">harshakota@iitd.ac.in</a>
       </section>
     </main>
-  </div>
 
-<script src="script.js"></script>
+    <footer class="footer">
+      URAM-IITD members page rebuilt for GitHub Pages.
+    </footer>
+  </div>
 </body>
 </html>

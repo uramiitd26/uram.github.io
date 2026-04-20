@@ -322,6 +322,46 @@
       margin-top: 8px;
     }
 
+    .phase-grid {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .phase-card {
+      border-radius: 22px;
+      padding: 22px;
+      background: var(--surface-strong);
+      border: 1px solid rgba(255, 255, 255, 0.84);
+      box-shadow: var(--shadow);
+    }
+
+    .phase-card h3 {
+      margin: 0 0 12px;
+      font-family: "Playfair Display", serif;
+      font-size: 1.6rem;
+      line-height: 1.08;
+    }
+
+    .phase-card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .phase-card ol,
+    .phase-card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .phase-card li + li {
+      margin-top: 8px;
+    }
+
     .contact-band {
       border-radius: var(--radius-lg);
       display: grid;
@@ -399,6 +439,7 @@
       }
 
       .sponsor-grid,
+      .phase-grid,
       .hero-points {
         grid-template-columns: 1fr;
       }
@@ -449,13 +490,13 @@
         </div>
         <nav class="nav" aria-label="Primary navigation">
           <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="teaching.html">Teaching</a>
-          <a href="publications.html">Publications</a>
+          <a class="active" href="projects.html">Projects</a>
+          <a href="index.html#research">Teaching</a>
+          <a href="index.html#forecast">Publications</a>
           <a href="members.html">Members</a>
-          <a href="collabrations.html">Collaborations</a>
-          <a href="current-openings.html">Current Openings</a>
-          <a href="contact.html">Contact</a>
+          <a href="index.html#team">Collaborations</a>
+          <a href="index.html#team">Current Openings</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
@@ -465,12 +506,19 @@
         <div class="hero-media reveal">
           <div class="image-placeholder">
             <span class="image-tag">Insert Image</span>
+            <div>
+              <h2 class="image-title">Add a project collage or field-work image here</h2>
+              <p class="image-note">Use this block for a team-on-site photo, lab image, or a generated visual representing funded projects.</p>
+            </div>
           </div>
         </div>
 
         <div class="hero-copy reveal">
           <p class="eyebrow">Projects</p>
           <h1>Sponsored research and applied air-quality initiatives.</h1>
+          <p>
+            This page compiles CV-backed sponsored external R&amp;D projects spanning source apportionment, clean-air planning, machine learning, health risk analysis, and climate-linked environmental systems.
+          </p>
           <ul class="hero-points">
             <li>
               <span class="point-label">Scope</span>
@@ -491,6 +539,9 @@
       <section class="section-shell reveal">
         <p class="section-label">Sponsored Grants</p>
         <h2 class="section-title">Sponsored External R&D Grants as Principal Investigator</h2>
+        <p>
+          The following projects are organized by funding or partner organization for easier scanning on desktop and mobile. Project roles are Principal Investigator unless explicitly stated otherwise.
+        </p>
 
         <div class="sponsor-grid">
           <article class="sponsor-card">
@@ -598,6 +649,46 @@
         </div>
       </section>
 
+      <section class="section-shell reveal">
+        <p class="section-label">Project Timeline</p>
+        <h2 class="section-title">Completed and ongoing projects from the CV portfolio</h2>
+        <p>
+          In addition to sponsor-wise grouping, the projects below are separated by status to make proposal preparation, reporting, and collaboration discussions easier.
+        </p>
+        <div class="phase-grid">
+          <article class="phase-card">
+            <h3>Completed Projects (Selected)</h3>
+            <p>Major completed projects from 2010 to 2024 across IITD, IITG, and multi-partner initiatives.</p>
+            <ol>
+              <li>Improving Emission Inventories Using Direct Flux Measurements and Modeling (US EPA, 2010-2014)</li>
+              <li>Methodology for Regulating Traffic Flows under Air Quality Constraints in Metropolitan Areas (US DOT, 2008-2009)</li>
+              <li>Urban Black Carbon: Global Impacts and Local Mitigations (DST, 2015-2018)</li>
+              <li>Development and performance validation of a membrane based air purification unit (Eureka Forbes, 2017-2018)</li>
+              <li>Bi-weekly action plan for PM2.5 management in Delhi (CPCB, 2019-2020)</li>
+              <li>SuddhaVaayu: Electrical Chamber for Detection and Mitigation of Air Pollution (DST, 2018-2022)</li>
+              <li>Evaluation of Impact of Electronic Toll Collection System on Vehicular Emissions (NHAI, 2020-2022)</li>
+              <li>PM10 and PM2.5 health risks in North East India (SERB, 2018-2022)</li>
+              <li>Real-Time Source Apportionment and Forecasting for Delhi (DPCC, 2022-2023)</li>
+              <li>Pilot Study for reducing urban air pollution using medium-scale cleaning system (CPCB, 2020-2023)</li>
+              <li>Source Apportionment and Carrying Capacity of seven non-attainment cities in Punjab (PPCB, 2019-2023)</li>
+              <li>Clean air action plans in Indore, Jakarta, and Addis Ababa (USAID-supported, 2022-2024)</li>
+            </ol>
+          </article>
+
+          <article class="phase-card">
+            <h3>Ongoing Projects</h3>
+            <p>Current projects focused on decision support, forecasting, and health-climate-air quality interfaces.</p>
+            <ul>
+              <li>Developing Machine Learning Models for Air Quality Forecasting and Decision Support in Non-attainment Cities (DST-CoE, 2024-2026)</li>
+              <li>Using Machine Learning to Study Air Quality Data Collected by Pollution Control Boards Across India (CPCB, 2023-2026)</li>
+              <li>Air Pollution, Malaria and Climate Change (ICMR, 2021-2024)</li>
+              <li>Source Apportionment and Emission Inventory Development of Amritsar city (PPCB, 2022-2024)</li>
+              <li>Technical Air Resource Unit (TARU) for scientific analysis, management and coordination (DST-supported)</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
       <section class="contact-band reveal" id="contact">
         <div>
           <p class="section-label">Contact</p>
@@ -607,6 +698,10 @@
         <a class="contact-link" href="mailto:harshakota@iitd.ac.in">harshakota@iitd.ac.in</a>
       </section>
     </main>
+
+    <footer class="footer">
+      URAM-IITD projects page rebuilt for GitHub Pages.
+    </footer>
   </div>
 </body>
 </html>

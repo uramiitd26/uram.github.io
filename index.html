@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="Ib5AKd1KGT3CSqcD7YxPKdD88Stz6O-n7Hj-J1yIT0g" />
   <title>URAM-IITD | Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -73,20 +72,19 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      padding: 12px 18px;
+      gap: 24px;
+      padding: 18px 22px;
       background: var(--surface);
       border: 1px solid rgba(255, 255, 255, 0.7);
-      border-radius: 20px;
+      border-radius: 24px;
       box-shadow: var(--shadow);
     }
 
     .brand {
       display: flex;
       flex-direction: column;
-      gap: 2px;
-      min-width: fit-content;
-      flex-shrink: 0;
+      gap: 4px;
+      min-width: 200px;
     }
 
     .brand-kicker {
@@ -106,17 +104,17 @@
 
     .nav {
       display: flex;
-      align-items: center;
-      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
     }
 
     .nav a {
-      padding: 8px 12px;
+      padding: 10px 14px;
       border-radius: 999px;
-      font-size: 0.85rem;
+      font-size: 0.92rem;
       color: var(--muted);
       transition: 0.25s ease;
-      white-space: nowrap;
     }
 
     .nav a:hover,
@@ -390,6 +388,37 @@
       min-height: 100%;
     }
 
+    .metric-grid {
+      margin: 18px 0 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric-item {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 16px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .metric-value {
+      display: block;
+      font-size: 1.28rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      display: block;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
     .forecast-card {
       border-radius: var(--radius-lg);
       padding: 30px;
@@ -473,6 +502,21 @@
       font-size: 0.82rem;
     }
 
+    .leader-meta {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 14px;
+      font-size: 0.94rem;
+      color: var(--ink);
+    }
+
+    .leader-meta strong {
+      color: var(--accent-deep);
+    }
+
     .team-card {
       display: grid;
       grid-template-columns: 1.3fr 0.7fr;
@@ -527,26 +571,6 @@
       animation-delay: 0.24s;
     }
 
-    .image-wrapper {
-      position: relative;
-      overflow: hidden;
-      padding: 0;
-    }
-    
-    .responsive-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    
-    .image-overlay {
-      position: absolute;
-      bottom: 16px;
-      left: 16px;
-      z-index: 2;
-    }
-
     @keyframes reveal {
       to {
         opacity: 1;
@@ -569,6 +593,11 @@
       .team-card {
         gap: 16px;
       }
+
+      .metric-grid,
+      .leader-meta {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 760px) {
@@ -577,41 +606,7 @@
         padding-top: 14px;
       }
 
-      .site-header {
-        margin-bottom: 16px;
-      }
-
-      .header-bar {
-        padding: 10px 14px;
-        flex-direction: row; 
-        align-items: center;
-      }
-
-      .brand-kicker {
-        font-size: 0.65rem;
-        letter-spacing: 0.15em;
-      }
-
-      .brand-name {
-        font-size: 1.2rem;
-      }
-
-      .nav {
-        justify-content: flex-start;
-        overflow-x: auto; 
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        max-width: 60%; 
-        mask-image: linear-gradient(to right, black 80%, transparent 100%);
-        padding-bottom: 4px; 
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      
-      .nav::-webkit-scrollbar {
-        display: none;
-      }
-
+      .header-bar,
       .hero-copy,
       .content-card,
       .leader-card,
@@ -632,6 +627,12 @@
       .interest-list {
         grid-template-columns: 1fr;
       }
+
+      .nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
     }
   </style>
 </head>
@@ -646,12 +647,12 @@
         <nav class="nav" aria-label="Primary navigation">
           <a href="index.html">Home</a>
           <a href="projects.html">Projects</a>
-          <a href="teaching.html">Teaching</a>
-          <a href="publications.html">Publications</a>
+          <a href="#research">Teaching</a>
+          <a href="#forecast">Publications</a>
           <a href="members.html">Members</a>
-          <a href="collabrations.html">Collaborations</a>
-          <a href="current-openings.html">Current Openings</a>
-          <a href="contact.html">Contact</a>
+          <a href="#team">Collaborations</a>
+          <a href="#team">Current Openings</a>
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
@@ -660,9 +661,10 @@
       <section class="hero" id="home">
         <div class="hero-media reveal">
           <div class="image-placeholder" aria-label="Image placeholder">
+            <span class="image-tag">Insert Image</span>
             <div>
-              <h2 class="image-title">image </h2>
-              <p class="image-note"></p>
+              <h2 class="image-title">Add a lab photo, city airscape, or team image here</h2>
+              <p class="image-note">You can replace this block with your own image later, or keep it as a visual placeholder while the site is being prepared.</p>
             </div>
           </div>
         </div>
@@ -680,15 +682,15 @@
           <ul class="hero-points">
             <li>
               <span class="point-label">Focus</span>
-              <span class="point-text">Regional and urban air-quality modeling</span>
+              <span class="point-text">Urban, regional, and indoor air-quality systems</span>
             </li>
             <li>
               <span class="point-label">Approach</span>
-              <span class="point-text">Research aligned with policy and action planning</span>
+              <span class="point-text">Modeling, field measurements, health analysis, and policy support</span>
             </li>
             <li>
               <span class="point-label">Base</span>
-              <span class="point-text">Department of Civil Engineering, IIT Delhi</span>
+              <span class="point-text">Professor, Department of Civil &amp; Environmental Engineering, IIT Delhi</span>
             </li>
           </ul>
         </div>
@@ -699,27 +701,44 @@
           <p class="section-label">Research Interests</p>
           <h2 class="section-title">Science, modeling, and actionable insight.</h2>
           <p>
-            Our work spans the formation, transformation, and chemical mechanisms of air pollutants near their sources. We build and improve air-quality models that help explain current conditions and support better environmental planning.
+            Our work spans urban and regional air-quality modeling, PM-related health burden estimation, source apportionment, and development of emission factors for transport, industrial, and residential sectors.
           </p>
           <p>
-            The group also studies source apportionment, indoor air quality, regional air quality, and air purification, connecting computational analysis with real-world urban challenges.
+            The group also investigates indoor air quality, climate-change interactions, air purification systems, and machine-learning tools for forecasting and action planning.
           </p>
           <ul class="interest-list">
-            <li>Formation and transformation of air pollutants near sources</li>
-            <li>Development of air-quality models</li>
-            <li>Source apportionment of air pollutants</li>
-            <li>Indoor and regional air-quality studies</li>
-            <li>Air purification research</li>
-            <li>Policy-facing environmental action support</li>
+            <li>Urban and regional air-quality modeling</li>
+            <li>PM2.5 source apportionment and exposure analytics</li>
+            <li>Emission inventory development and validation</li>
+            <li>Indoor air quality and purification system design</li>
+            <li>Climate-air quality co-benefit and adaptation studies</li>
+            <li>Machine-learning and forecasting for non-attainment cities</li>
           </ul>
         </article>
 
         <aside class="forecast-card reveal" id="forecast">
-          <p class="section-label" style="color: rgba(255,255,255,0.7);">Forecast Dashboard</p>
-          <h2 class="section-title" style="color: #fff; margin-bottom: 14px;">Delhi-NCR air-quality forecast</h2>
+          <p class="section-label" style="color: rgba(255,255,255,0.7);">Publications and Forecast</p>
+          <h2 class="section-title" style="color: #fff; margin-bottom: 14px;">Research visibility and live forecasting</h2>
           <p>
-            More details about the group's air-quality forecast for Delhi-NCR can be explored through the external dashboard linked below.
+            Dr. Sri Harsha Kota's publication profile includes high-impact work across air quality, health burden, and clean-air planning, along with actionable forecasting support for Delhi-NCR.
           </p>
+          <div class="metric-grid">
+            <div class="metric-item">
+              <span class="metric-value">4432</span>
+              <span class="metric-label">Citations</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">33</span>
+              <span class="metric-label">h-index</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">54</span>
+              <span class="metric-label">i10-index</span>
+            </div>
+          </div>
+          <a class="forecast-link" href="https://scholar.google.co.in/citations?hl=en&amp;user=j9Z84DYAAAAJ&amp;view_op=list_works" target="_blank" rel="noreferrer">
+            View Google Scholar profile
+          </a>
           <a class="forecast-link" href="http://www.raasman.com/dashboard/forecast_pollutants" target="_blank" rel="noreferrer">
             Visit the forecast dashboard
           </a>
@@ -727,11 +746,13 @@
       </section>
 
       <section class="profile-section">
-          <div class="image-placeholder image-wrapper">
-          <img src="images/harsha_kota.jpg" alt="Prof. Sri Harsha Kota" class="responsive-img">
-          
-          <div class="image-overlay">
-            <span class="image-tag">Prof. Sri Harsha Kota</span>
+        <div class="leader-visual reveal">
+          <div class="image-placeholder" aria-label="Group leader image placeholder">
+            <span class="image-tag">Insert Image</span>
+            <div>
+              <h2 class="image-title">Add Prof. Sri Harsha Kota's portrait here</h2>
+              <p class="image-note">Use a formal headshot or faculty profile image for a more complete homepage.</p>
+            </div>
           </div>
         </div>
 
@@ -739,15 +760,21 @@
           <p class="section-label">Leadership</p>
           <div class="leader-header">
             <h2 class="leader-name">Dr. Sri Harsha Kota</h2>
-            <p class="leader-role">Group Leader</p>
+            <p class="leader-role">Professor and Chair Professor, CERCA</p>
           </div>
           <div class="leader-text">
             <p>
-              Dr. Sri Harsha Kota completed his Bachelor of Engineering in Civil Engineering from CBIT, Osmania University, Hyderabad, India in 2007. He received his Master of Science and Doctoral degrees from Texas A&amp;M University, College Station, USA in 2014.
+              Dr. Sri Harsha Kota is Professor in the Department of Civil and Environmental Engineering, IIT Delhi (since February 2026), and serves as Chair Professor at the Center for Excellence in Research in Clean Air (CERCA), IIT Delhi (since January 2020).
             </p>
             <p>
-              He worked as an Assistant Professor at IIT Guwahati for more than three years before joining IIT Delhi in May 2018. He is currently an Professor in the Department of Civil Engineering at IIT Delhi.
+              He previously served as Associate Professor at IIT Delhi (February 2021-February 2026), Assistant Professor at IIT Delhi (May 2018-February 2021), and Assistant Professor at IIT Guwahati (August 2014-May 2018), after completing his PhD and MS at Texas A&amp;M University in Environmental and Water Resources Engineering.
             </p>
+            <div class="leader-meta">
+              <span><strong>Email:</strong> harshakota@iitd.ac.in</span>
+              <span><strong>Lab Website:</strong> web.iitd.ac.in/~harshakota/</span>
+              <span><strong>Research:</strong> Air quality modeling, source apportionment, health burden</span>
+              <span><strong>Recognition:</strong> INAE Young Engineer Award (2021)</span>
+            </div>
           </div>
         </article>
       </section>
@@ -757,7 +784,7 @@
           <p class="section-label">Team</p>
           <h2 class="team-title">URAM-IIT Delhi Team</h2>
           <p>
-            The group brings together research, technical modeling, and practical environmental insight to contribute to healthier and more resilient urban regions.
+            The group advances modeling-to-policy research through sponsored projects with CPCB, DPCC, ICMR, HSPCB, PPCB, NHAI, SERB, DST, and international collaborators.
           </p>
           <p id="contact">
             Get in touch at

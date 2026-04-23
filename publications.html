@@ -76,6 +76,37 @@ h1 {
   color:var(--accent);
 }
 
+/* Custom styles for highlights and show more */
+.highlight-name {
+  font-weight: 800;
+  color: var(--accent);
+  background-color: #e0f2f3;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.more-content {
+  display: none;
+  margin-top: 15px;
+}
+
+.show-more-btn {
+  background-color: var(--accent);
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  margin-top: 5px;
+  transition: background 0.3s;
+}
+
+.show-more-btn:hover {
+  background-color: #0a464c;
+}
+
 /* Responsive */
 @media(max-width:768px){
   h1 {font-size:1.8rem;}
@@ -105,131 +136,145 @@ h1 {
 
 <div class="section">
 
-<div class="section">
+  <h2>Journal Publications</h2>
+  <div id="journals-container">
+    <div class="pub">1. Garima Sharma, Pareshbhai Dineshbhai Parmar, Arvind Kumar Nema, Prashant Gargava, <span class="highlight-name">Sri Harsha Kota</span>. Systematic exposure bias in city-level air quality reporting revealed by 38 years of Indian observations. 2026. Scientific Reports, Nature Publishing Group UK. In Press.</div>
+    <div class="pub">2. Yash Jain, Vivek Kumar, Rajyalakshmi Garaga, <span class="highlight-name">Sri Harsha Kota</span>. Assessment of Discrepancies in PM2.5 Modeling and Heavy Metal Associated Health Implications in Tier 2 and 3 Non-Attainment Cities: EDGAR-Driven WRF-Chem vs. Field Data in Alwar and Amritsar. 2025. Environmental Pollution. 374, 126223.</div>
+    <div class="pub">3. Baby Keerthi Thirunagari, Rajesh Kumar, <span class="highlight-name">Sri Harsha Kota</span>. Assessing and Mitigating India's Agricultural Emissions: A Regional and Temporal Perspective on Crop Residue, Tillage, and Livestock Contributions. 2025. Journal of Hazardous Materials. 488, 137407.</div>
+    <div class="pub">4. Syed Shah Areeb Hussain, Sanchit Bedi, Chander Prakash Yadav, Ajeet Kumar Mohanty, Kalpana Mahatme, Suchi Tyagi, NM Anoop Krishnan, <span class="highlight-name">Sri Harsha Kota</span>, Amit Sharma. Hybrid models combining trend and seasonality components with machine learning algorithms provide accurate forecasting of malaria incidence. 2025. PLOS Global Public Health. 5 (10).</div>
+    <div class="pub">5. Garima Sharma, Medhavi Gupta, Prashant Gargava, <span class="highlight-name">Sri Harsha Kota</span>. Mapping air quality trends across 336 cities in India: Insights from three decades of monitoring (1987–2019). 2024. Environment International, 108979.</div>
+    <div class="pub">6. Baby Keerthi Thirunagari, M Kancheti, Rajesh Kumar, <span class="highlight-name">Sri Harsha Kota</span>. 2024. Managing synthetic N-fertilizer emissions in India: Insights from field surveys across 102 districts. Journal of Environmental Management 366, 121909.</div>
+    <div class="pub">7. Sanchit Bedi, Karn Tiwari, Prathosh AP, <span class="highlight-name">Sri Harsha Kota</span>, NM Anoop Krishnan. 2024. A neural operator for forecasting carbon monoxide evolution in cities. npj Clean Air, 1, 2.</div>
+    <div class="pub">8. Anjali Bansal, Sheikh Junaid Fayaz, NM Anoop Krishnan, <span class="highlight-name">Sri Harsha Kota</span>, Arvind Kumar Nema. Interpretable Machine Learning for Cost Estimation in Underground Pipe Installation. 2025. Journal of Pipeline Systems Engineering and Practice, 16, 05025004.</div>
+    <div class="pub">9. Viswanath Velamuri, Diljit Kumar Nayak, Shubham Sharma, Pareshbhai Dineshbhai Parmar, Pavan Kumar Nagar, Dhirendra Singh, Mukesh Sharma, Yash Jain, Arpit Katiyar, Sunil Dahiya, Nandikesh Sivalingam, Lauri Myllyvirta, Rao Y. Surampalli, and Tian C. Zhang, Hongliang Zhang and <span class="highlight-name">Sri Harsha Kota</span>. 2024. India leads in emission intensity per GDP: Insights from the gridded emission inventory for residential, road transport, and energy sectors. Journal of Environmental Sciences. 158, 644-658.</div>
+    <div class="pub">10. Anjali Bansal, <span class="highlight-name">Sri Harsha Kota</span>, NM Anoop Krishnan, Arvind Kumar Nema. 2024. Critical Evaluation of Commonly Used Software Packages for Designing Wastewater Networks. Journal of Environmental Engineering. Volume 150, Issue 12.</div>
 
-<h2>Journal Publications</h2>
+    <div class="more-content" id="more-journals">
+      <div class="pub">11. Ajit Singh, Amruta Joshi, Francis D Pope, Bhim Singh, Mukesh Khare, <span class="highlight-name">Sri Harsha Kota</span>, Jonathan Radcliffe. 2024. Evaluating alternative technologies to diesel generation in India using multi-criteria decision analysis. Cleaner Energy Systems. Volume 9, 100133.</div>
+      <div class="pub">12. Shuai Wang, Mengyuan Zhang, Hui Zhao, Peng Wang, <span class="highlight-name">Sri Harsha Kota</span>, Qingyan Fu, Hongliang Zhang. 2024. Extracting regional and temporal features to improve machine learning for hourly air pollutants in urban India. Atmospheric Environment, 120834.</div>
+      <div class="pub">13. Shuai Wang, Mengyuan Zhang, Hui Zhao, Peng Wang, <span class="highlight-name">Sri Harsha Kota</span>, Qingyan Fu, Cong Liu, Hongliang Zhang. 2024. Reconstructing long-term (1980–2022) daily ground particulate matter concentrations in India (LongPMInd). Earth System Science Data 16 (8), 3565-3577.</div>
+      <div class="pub">14. Yiyi Wang, Jianlin Hu, Yangyang Wu, <span class="highlight-name">Sri Harsha Kota</span>, Hongliang Zhang, Kangjia Gong, Xiaodong Xie, Xu Yue, Hong Liao, Lei Huang. 2024. Continued Rise in Health Burden from Ambient PM2.5 in India under SSP Scenarios Until 2100 despite Decreasing Concentrations. Environmental Science & Technology. 58. 8685-8695.</div>
+      <div class="pub">15. Medhavi Gupta, Supriya Dwivedi, <span class="highlight-name">Sri Harsha Kota</span>. 2024. From Kitchen to Air: Emissions from India’s Thriving Restaurant Food Service Sector. ACS EST Air, 1, 6, 570–581.</div>
+      <div class="pub">16. Diljit Kumar Nayak, Gazala Habib, <span class="highlight-name">Sri Harsha Kota</span>. 2024. Can Landuse Landcover changes influence the success of India's national clean air plans? Atmospheric Environment X. Volume 22, 100251.</div>
+      <div class="pub">17. Sanchit Bedi, Arpit Katiyar, NM Anoop Krishnan, <span class="highlight-name">Sri Harsha Kota</span>. 2024. Utilizing LSTM models to predict PM2.5 levels during critical episodes in Delhi, the world's most polluted capital city. Urban Climate. 53, 101835.</div>
+      <div class="pub">18. Arpit Katiyar, Diljit Kumar Nayak, Pavan Kumar Nagar, Dhirendra Singh, Mukesh Sharma and <span class="highlight-name">Sri Harsha Kota</span>. 2023. Fugitive road dust particulate matter emission inventory for India: A field campaign in 32 Indian cities. Science of The Total Environment, 912, 169232.</div>
+      <div class="pub">19. Amit Munjal, Archana Chawla, Arvind K Nema and <span class="highlight-name">Sri Harsha Kota</span>. 2024. Particle Number Emission for Different Toll Collection Systems in India. Journal of Hazardous, Toxic, and Radioactive Waste, 28 (2).</div>
+      <div class="pub">20. Baby Keerthi Thirunagari, Rajyalakshmi Garaga and <span class="highlight-name">Sri Harsha Kota</span>. 2023. Association of Ventilation Rates with Building Design in Various Built Environments: A Critical Review. Current Pollution Reports, 9 (3), 569-589.</div>
+      <div class="pub">21. Medhavi Gupta, Diljit Kumar Nayak, <span class="highlight-name">Sri Harsha Kota</span>. 2023. Impact of Particulate Matter-Centric Clean Air Action Plans on Ozone Concentrations in India. ACS Earth and Space Chemistry, 7 (5), 1038-1048.</div>
+      <div class="pub">22. Qi Qi, Shuai Wang, Hui Zhao, <span class="highlight-name">Sri Harsha Kota</span> and Hongliang Zhang. 2023. Rice yield losses due to O3 pollution in China from 2013 to 2020 based on the WRF-CMAQ model. Journal of Cleaner Production, 401, 136801.</div>
+      <div class="pub">23. Amit Munjal, Shubham Sharma, Arvind K. Nema and <span class="highlight-name">Sri Harsha Kota</span>. 2022. Factors affecting particulate matter levels near highway toll plazas in India. Transportation Research Part D: Transport and Environment, 110, 103403.</div>
+      <div class="pub">24. Pratibha Anand, Usha Mina, Mukesh Khare, Prashant Kumar and <span class="highlight-name">Sri Harsha Kota</span>. 2022. Air Pollution and Plant Health Response-Current Status and Future Directions. Atmospheric Pollution Research. 10508.</div>
+      <div class="pub">25. Shubham Sharma, Mina Chandra and <span class="highlight-name">Sri Harsha Kota</span>. 2022. Four year long simulation of carbonaceous aerosols in India: Seasonality, sources and associated health effects. Environmental Research. 213, 113676.</div>
+      <div class="pub">26. Shubham Sharma, Mukesh Khare and <span class="highlight-name">Sri Harsha Kota</span>. 2022. Action Plans to Reduce PM2.5 Concentrations in Hotspots of Delhi-NCR Using a One-way Coupled Modeling Approach. Aerosol and Air Quality Research 22, 210377.</div>
+      <div class="pub">27. Fenglin Han, <span class="highlight-name">Sri Harsha Kota</span>, Shubham Sharma, Jie Zhang, Qi Ying and Hongliang Zhang. 2022. Modeling polycyclic aromatic hydrocarbons in India: Seasonal variations, sources and associated health risks. Environmental Research. 113466.</div>
+      <div class="pub">28. Prashant Kumar, Sarkawt Hama, Rana Alaa Abbass, Thiago Nogueira, Veronika S. Brand, Huai-Wen Wu, Francis Olawale Abulude... Mukesh Khare, <span class="highlight-name">Sri Harsha Kota</span>, et al. 2022. In-kitchen aerosol exposure in twelve cities across the globe. Environment International. 162, 107155.</div>
+      <div class="pub">29. Mina Chandra, Chandra Bhushan Rai, Neelam Kumari, Vipindeep Kaur Sandhu, Kalpana Chandra, Murali Krishna, <span class="highlight-name">Sri Harsha Kota</span>, Kuljeet Singh Anand and Anna Oudin. 2022. Air Pollution and Cognitive Impairment across the Life Course in Humans: A Systematic Review with Specific Focus on Income Level of Study Area. Int. J. Environ. Res. Public Health. 19, 1405.</div>
+      <div class="pub">30. Shubham Sharma, Rojna Sharma, Shovan Sahu, <span class="highlight-name">Sri Harsha Kota</span>. 2021. Transboundary sources dominated PM2.5 in Thimphu, Bhutan. International Journal of Environmental Science and Technology. 19 (6), 5649-5658.</div>
+      <div class="pub">31. Mengyuan Zhang, Apit Katiyar, Shengqiang Zhu, Juanyong Shen, Men Xia, Jinlong Ma, <span class="highlight-name">Sri Harsha Kota</span>, Peng Wang, Hongliang Zhang. 2021. Impact of reduced anthropogenic emissions during COVID-19 on air quality in India. Atmospheric Chemistry and Physics. 21, 4025–4037.</div>
+      <div class="pub">32. Aifang Gao, Junyi Wang, Jianfei Luo, Pengfei Wang, Kaiyu Chen, Yiyi Wang, Jingyi Li, Jianlin Hu, <span class="highlight-name">Sri Harsha Kota</span>, Hongliang Zhang. 2020. Health and economic losses attributable to PM 2.5 and ozone exposure in Handan, China. Air Quality, Atmosphere & Health. 14, 5, 605-615.</div>
+      <div class="pub">33. Shovan Kumar Sahu, S Zhu, H Guo, K Chen, S Liu, J Xing, <span class="highlight-name">Sri Harsha Kota</span>, Hongliang Zhang. 2021. Contributions of power generation to air pollution and associated health risks in India: current status and control scenarios. Journal of Cleaner Production, 288, 125587.</div>
+      <div class="pub">34. Shubham Sharma, Mina Chandra, <span class="highlight-name">Sri Harsha Kota</span>. 2020. Health Effects Associated with PM2.5: a Systematic Review. Current Pollution Reports, 5, 144-158.</div>
+      <div class="pub">35. Shubham Sharma, Mengyuan Zhang M, Jingsi Gao, Hongliang Zhang, <span class="highlight-name">Sri Harsha Kota</span>. 2020. Effect of restricted emissions during COVID-19 on air quality in India. Science of The Total Environment, 728, 138878.</div>
+      <div class="pub">36. Rajyalakshmi Garaga, Sharad Gokhale, <span class="highlight-name">Sri Harsha Kota</span>. 2020. Source Apportionment of Size-Segregated Atmospheric Particles and the Influence of Particles Deposition in the Human Respiratory Tract in Rural and Urban Locations of north-east India. Chemosphere, 255, 126980.</div>
+      <div class="pub">37. Shovan Kumar Sahu, Shubham Sharma, Hongliang Zhang, Venkatesh Chejarla, Hao Guo, Jianlin Hu, Qi Ying, Jia Xing, <span class="highlight-name">Sri Harsha Kota</span>. 2020. Estimating ground level PM2.5 concentrations and associated health risk in India using satellite based AOD and WRF predicted meteorological parameters. Chemosphere, 255, 126969.</div>
+      <div class="pub">38. Rajyalakshmi Garaga, Supriyo Chakraborty, Hongliang Zhang, Sharad Gokhale, Qiao Xue, <span class="highlight-name">Sri Harsha Kota</span>. 2020. Influence of anthropogenic emissions on wet deposition of pollutants and rainwater acidity in Guwahati, a UNESCO heritage city in Northeast India. Atmospheric Research, 232, 104683.</div>
+      <div class="pub">39. Hao Guo, <span class="highlight-name">Sri Harsha Kota</span>, Shovan Kumar Sahu, Hongliang Zhang. 2019. Contributions of local and regional sources to PM2.5 and its health effects in north India. Atmospheric Environment, 214, 116867.</div>
+      <div class="pub">40. Vishal Kumar Verma, Senthilmurugan Subbiah, <span class="highlight-name">Sri Harsha Kota</span>. 2019. Sericin-coated polyester based air-filter for removal of particulate matter and volatile organic compounds (BTEX) from indoor air. Chemosphere, 237, 124462.</div>
+      <div class="pub">41. Jianing Lou, Yangyang Wu, Penghui Liu, <span class="highlight-name">Sri Harsha Kota</span>, Lei Huang. 2019. Health Effects of climate change through temperature and air pollution. Current Pollution Reports, 5, 144-158.</div>
+      <div class="pub">42. Wasim Javed, Iakovid, Rajyalakshmi Garaga, <span class="highlight-name">Sri Harsha Kota</span>, Qi Ying, Wolfson, Koutrakis, Bing Guo. 2019. Source apportionment of organic pollutants in fine and coarse atmospheric particles in Doha, Qatar. Journal of the Air & Waste Management Association 69, 1277-1292.</div>
+      <div class="pub">43. Pengfei Wang, Hao Guo, Jianlin Hu, <span class="highlight-name">Sri Harsha Kota</span>, Qi Ying, Hongliang Zhang. 2019. Responses of PM2.5 and O3 concentrations to changes of meteorology and emissions in China. Science of The Total Environment, 662, 297-307.</div>
+      <div class="pub">44. Jinjin Sun, Mingjie Liang, Zhihao Shi, Fuzhen Shen, Jingyi Li, Lin Huang, Xinlei Ge, Qi Chen, Yele Sun, Yanlin Zhang, Yunhua Chang, Dongsheng Ji, Qi Ying, Hongliang Zhang, <span class="highlight-name">Sri Harsha Kota</span>, Jianlin Hu. 2019. Investigating the PM2.5 mass concentration growth processes during 2013–2016 in Beijing and Shanghai. Chemosphere, 221, 452-463.</div>
+      <div class="pub">45. Kaiyu Chen, Hao Guo, Jianlin Hu, <span class="highlight-name">Sri Harsha Kota</span>, Wenye Deng, Qi Ying, Lauri Myllyvirta, Sunil Dahiya and Hongliang Zhang. 2019. Projected air quality and health benefits from future policy interventions in India. Resources, Conservation and Recycling, 142, 232-234.</div>
+      <div class="pub">46. Hao Guo, Shovan Kumar Sahu, <span class="highlight-name">Sri Harsha Kota</span> and Hongliang Zhang. 2019. Characterization and health risks of criteria air pollutants in Delhi, 2017. Chemosphere, 225, 27-34.</div>
+      <div class="pub">47. Shovan Kumar Sahu, Hongliang Zhang, H. Guo, J. Hu, Q. Ying and <span class="highlight-name">Sri Harsha Kota</span>. 2019. Health risk associated with potential source regions of PM 2.5 in Indian cities. Air Quality, Atmosphere & Health. 12. 327-340.</div>
+      <div class="pub">48. Rajyalakshmi Garaga, C.K.R. Avinash and <span class="highlight-name">Sri Harsha Kota</span>. 2019. Seasonal variation of airborne allergenic fungal spores in ambient PM10—a study in Guwahati, the largest city of north-east India. Air Quality Atmosphere & Health. 12. 11-20.</div>
+      <div class="pub">49. Sai Kumar Annadanam and <span class="highlight-name">Sri Harsha Kota</span>. 2019. Emission of greenhouse gases and criteria pollutants from railways in India estimated using a modified top-down approach. Journal of Cleaner Production. 20, 610-617.</div>
+      <div class="pub">50. Rajyalakshmi Garaga and <span class="highlight-name">Sri Harsha Kota</span>. 2018. Characterization of PM10 and Impact on Human Health during the annual festival of lights (Diwali). Journal of Health and Pollution, 8, 181206.</div>
+      <div class="pub">51. Hao Guo, <span class="highlight-name">Sri Harsha Kota</span>, Chen K, Shovan Kumar Sahu, Jianlin Hu, Qi Ying, Yuan Wang and Hongliang Zhang. 2018. Source contributions and potential reductions to health effects of particulate matter in India. Atmospheric Chemistry and Physics, 18, 15219-15229.</div>
+      <div class="pub">52. <span class="highlight-name">Sri Harsha Kota</span>, Hao Guo, Lauri Myllyvirta, Jianlin Hu, Shovan Kumar Sahu, Rajyalakshmi Garaga, Qi Ying, Aifang Gao, Sunil Dahiya, Yuan Wang and Hongliang Zhang. 2018. Year-long simulation of gaseous and particulate air pollutants in India. Atmospheric Environment, 180, 244-255.</div>
+      <div class="pub">53. Rajyalakshmi Garaga, Shovan Kumar Sahu and <span class="highlight-name">Sri Harsha Kota</span>. 2018. A Review of Air Quality Modeling Studies in India: Local and Regional Scale. Current Pollution Reports, 4, 59-73.</div>
+      <div class="pub">54. Muralidhar Gollapalli and <span class="highlight-name">Sri Harsha Kota</span>. 2018. Methane emissions from landfills in North-East India: Performance of various landfill gas emission models. Environmental Pollution, 234, 174-180.</div>
+      <div class="pub">55. Mohammad Hashem Askariyeh, <span class="highlight-name">Sri Harsha Kota</span>, Suriya Vallamsundar, Joe Zietsman and Qi Ying. 2017. AERMOD for near-road pollutant dispersion: Evaluation of model performance with different emission source representations and low wind options. Transportation Research Part D: Transport and Environment, 57, 392-402.</div>
+      <div class="pub">56. Xue Qiao, Jie Du, <span class="highlight-name">Sri Harsha Kota</span>, Qi Ying, Weiyang Xiao and Ya Tang. 2017. Wet deposition of sulfur and nitrogen in Jiuzhaigou National Nature Reserve, Sichuan China during 2015-2016: possible effects from regional emission reduction and local tourist activities. Environmental Pollution, 233, 267-277.</div>
+      <div class="pub">57. Hao Guo, <span class="highlight-name">Sri Harsha Kota</span>, Shovan Kumar Sahu, Jianlin Hu, Qi Ying, Aifang Gao, Hongliang Zhang. 2017. Source apportionment of PM2.5 in North India using a source-oriented regional air quality model. Environmental Pollution, 231, 426-436.</div>
+      <div class="pub">58. Fenglin Han, <span class="highlight-name">Sri Harsha Kota</span>, Yungang Wang and Hongliang Zhang. 2017. Source apportionment of PM2.5 in Baton Rouge, Louisiana during 2009-2014. Science of the Total Environment, 586, 115-126.</div>
+      <div class="pub">59. Shovan Kumar Sahu and <span class="highlight-name">Sri Harsha Kota</span>. 2017. Significance of PM2.5 air quality in the Indian capital. Aerosol and Air Quality Research, 17(2), 588-597.</div>
+      <div class="pub">60. Qi Ying, Jingyi Li and <span class="highlight-name">Sri Harsha Kota</span>. 2015. Significant Contributions of Isoprene to Summertime Secondary Organic Aerosol in Eastern United States. Environmental Science & Technology, 49(13), 7834-7842.</div>
+      <div class="pub">61. Xue Qiao, Ya Tang, <span class="highlight-name">Sri Harsha Kota</span>, Jingyi Li, Li Wu; Jianlin Hu and Hongliang Zhang. 2015. Modeling Dry and Wet Deposition of Sulfate, Nitrate, and Ammonium Ions in Jiuzhaigou National Nature Reserve, China using a Source-Oriented CMAQ Model: Part II. Emission Sector and Source Region Contributions. Science of the Total Environment, 532, 840-848.</div>
+      <div class="pub">62. Xue Qiao, Ya Yang, Jianlin Hu, Shuai Zhang; Jingyi Li, <span class="highlight-name">Sri Harsha Kota</span>, Li Wu, Huilin Gao, Hongliang Zhang and Qi Ying. 2015. Modeling Dry and Wet Deposition of Sulfate, Nitrate, and Ammonium Ions in Jiuzhaigou National Nature Reserve, China using a Source-Oriented CMAQ Model: Part I. Base Case Model. Science of the Total Environment, 532, 831-839.</div>
+      <div class="pub">63. <span class="highlight-name">Sri Harsha Kota</span>, Gunnar W. Schade, Mark Estes, Doug Boyer and Qi Ying. 2015. Evaluation of MEGAN Predicted Biogenic Isoprene Emissions at Urban Locations in Southeast Texas. Atmospheric Environment, 110, 54-64.</div>
+      <div class="pub">64. Xue Qiao, Daniel Jaffe, <span class="highlight-name">Sri Harsha Kota</span>, Qi Ying and Ya Tang. 2015. Atmospheric wet deposition of sulfur and nitrogen in Jiuzhaigou National Nature Reserve, Sichuan Province, China. Science of the Total Environment, 511, 28-36.</div>
+      <div class="pub">65. <span class="highlight-name">Sri Harsha Kota</span>, Hongliang Zhang, Gang Chen, Gunnar W. Schade, and Qi Ying. 2014. Evaluation of On-road Vehicle CO and NOx National Emission Inventories Using an Urban-scale Source-oriented Air Quality Model. Atmospheric Environment, 85, 99-108.</div>
+      <div class="pub">66. <span class="highlight-name">Sri Harsha Kota</span>, Changhyoun Park, Martin C. Hale, Nicholas D. Werner, Gunnar W. Schade and Qi Ying. 2014. Estimation of VOC Emission Factors from Flux Measurements using a Receptor Model and Footprint Analysis. Atmospheric Environment, 82, 24-35.</div>
+      <div class="pub">67. <span class="highlight-name">Sri Harsha Kota</span>, Qi Ying and Yunlong Zhang. 2013. Simulating Near-road Reactive Dispersion of Gaseous Air Pollutants using a Three-Dimensional Eulerian Model. Science of the Total Environment, 454-455, 348-357.</div>
+      <div class="pub">68. <span class="highlight-name">Sri Harsha Kota</span>, Qi Ying and Yunlong Zhang. 2010. TAMNROM-3D: A Three-Dimensional Eulerian Model to Simulate Air Quality near Highways. Transportation Research Record: Journal of Transportation Research Board, 2158, 61-68.</div>
+    </div>
+    <button class="show-more-btn" onclick="toggleVisibility('more-journals', this)">Show More</button>
+  </div>
 
-<div class="pub">
-1. Amit Munjal, Shubham Sharma, Arvind K. Nema and Sri Harsha Kota. Factors affecting particulate matter levels near highway toll plazas in India. Transportation Research Part D: Transport and Environment. Accepted.
-</div>
+  <hr>
 
-<div class="pub">
-2. Pratibha Anand et al. Air Pollution and Plant Health Response—Current Status and Future Directions. Atmospheric Pollution Research. Accepted.
-</div>
+  <h2>Conference Publications</h2>
+  <div id="conferences-container">
+    <div class="pub">1. Pareshbhai Dineshbhai Parmar, Mina Chandra, Shubham Sharma, and <span class="highlight-name">Sri Harsha Kota</span>. Cognitive impacts of Ground Level Ozone (GLO) exposure in Delhi: Estimating a risk in the highly polluted urban environment. European Geophysical Union, Vienna, Austria, 27 April-2 May, 2025.</div>
+    <div class="pub">2. Viswanath Velamuri, Baby Keerthi Thirunagari, Mukesh Khare, <span class="highlight-name">Sri Harsha Kota</span>. Evaluating the Performance of MUSICAv0 and WRF-Chem in Simulating Air Quality over Delhi, India. American Geophysical Union Fall Meeting, Washington D.C., 9-13 December, 2024.</div>
+    <div class="pub">3. Baby Keerthi Thirunagari, Rajesh Kumar, <span class="highlight-name">Sri Harsha Kota</span>. Quantifying Agricultural Emissions in India: A High-Resolution Study of Livestock and Tillage Across Administrative Regions. American Geophysical Union Fall Meeting, Washington D.C., 9-13 December, 2024.</div>
+    <div class="pub">4. Amit Munjal, Archana Chawla, Arvind K. Nema, <span class="highlight-name">Sri Harsha Kota</span>. Fine particulate number emission in different toll collection systems in India. The Transportation Research Board 102nd Annual Meeting (2023), Washington, D.C.</div>
+    <div class="pub">5. <span class="highlight-name">Sri Harsha Kota</span>, Shubham Sharma, Mukesh Khare, Hongliang Zhang. Estimating the influence of feasible interventions on potential decrease in PM 2.5 concentrations in Delhi-NCR using a one-way nested regional and urban air quality modelling framework. American Geophysical Union Fall Meeting, Washington D.C., 9-13 December, 2019.</div>
+    <div class="pub">6. Hao Guo, <span class="highlight-name">Sri Harsha Kota</span> and Hongliang Zhang. Effects of emission reductions in air pollution in India. American Geophysical Union Fall Meeting, Washington D.C., 9-13 December, 2019.</div>
+    <div class="pub">7. Rajyalakshmi Garaga, Sharad Gokhale and <span class="highlight-name">Sri Harsha Kota</span>. Identifying the Sources of Dry Deposition in Urban and Rural Residential Areas of Assam, India. Asia Oceania Geosciences Society 16th Annual Meeting, Singapore, 2019.</div>
+    <div class="pub">8. Hao Guo, <span class="highlight-name">Sri Harsha Kota</span> and Hongliang Zhang. Effects of climate change and emission scenarios on air pollution in India. American Geophysical Union Fall Meeting, Washington D.C., 10-14 December, 2018.</div>
+    <div class="pub">9. RajyaLakshmi Garaga and <span class="highlight-name">Sri Harsha Kota</span>. Source Apportionment of Size-Segregated Atmospheric Particles in Different Locations in Largest City of North-East India. American Geophysical Union Fall Meeting, Washington D.C., 10-14 December, 2018.</div>
+    <div class="pub">10. Shovan Kumar Sahu, <span class="highlight-name">Sri Harsha Kota</span>, Venkatesh Chejarla, Rishikesh Bharti, Hongliang Zhang. Estimating ground level PM2.5 concentrations and associated health risk using AOD in Indian cities. Asia Oceania Geosciences Society 2018, Honolulu, US, 3-6 June, 2018.</div>
 
-<div class="pub">
-3. Shubham Sharma et al. Four year long simulation of carbonaceous aerosols in India. Environmental Research. In Press.
-</div>
+    <div class="more-content" id="more-conferences">
+      <div class="pub">11. RajyaLakshmi Garaga, <span class="highlight-name">Sri Harsha Kota</span> and Shovan Kumar Sahu. Chemical composition and sources to rain water in north-east India. Asia Oceania Geosciences Society 2018, Honolulu, US.</div>
+      <div class="pub">12. <span class="highlight-name">Sri Harsha Kota</span>, Hao Guo, Shovan Kumar Sahu, Jianlin Hu, Qi Ying and Hongliang Zhang. Year-long simulation of gaseous and particulate air pollutants in India. Asia Oceania Geosciences Society 2017, Singapore.</div>
+      <div class="pub">13. <span class="highlight-name">Sri Harsha Kota</span>, Hao Guo, Jianlin Hu, Qi Ying and Hongliang Zhang. Regional Contributions to Primary and Secondary Inorganic Particulate Matter in India. JpGU-AGU Joint Meeting 2017, Chiba, Japan.</div>
+      <div class="pub">14. <span class="highlight-name">Sri Harsha Kota</span>, Shovan Kumar Sahu and Hongliang Zhang. Characterization and Regional Transport of PM2.5 in Indian Cities. JpGU-AGU Joint Meeting 2017, Chiba, Japan.</div>
+      <div class="pub">15. Mohammad Hashem Askariyeh, Suriya Vallamsundar, Joe Zietsman, <span class="highlight-name">Sri Harsha Kota</span> and Qi Ying. Evaluation of AERMOD for near-road pollutant dispersion. The Transportation Research Board 96th Annual Meeting (2017), Washington, D.C.</div>
+      <div class="pub">16. RajyaLakshmi Garaga and <span class="highlight-name">Sri Harsha Kota</span>. Characterization of PM10 and its impact on human health during annual festival of lights (Diwali) in Northeast India. Oral presentation at American Geophysical Union, Fall-2016 Meeting, San Francisco, CA.</div>
+      <div class="pub">17. <span class="highlight-name">Sri Harsha Kota</span>, Hongliang Zhang, Gunnar W. Schade, and Qi Ying. Evaluation of CO and NOx Emission Factors in Southeast Texas Using Source-Oriented CMAQ Model. The Transportation Research Board 92nd Annual Meeting (2013), Washington, D.C.</div>
+      <div class="pub">18. <span class="highlight-name">Sri Harsha Kota</span>, Hongliang Zhang, Qi Ying, Yungang Wang and Philip K. Hopke. Black Carbon Emission from Barbeque Activities during College Football Games. Aerosol and Atmospheric Optics: Visibility & Pollution Specialty Conference (2012), Whitefish, MT.</div>
+      <div class="pub">19. Martin C. Hale, Gunnar W. Schade, <span class="highlight-name">Sri Harsha Kota</span> and Qi Ying. VOC Flux Measurements using a Relaxed Eddy Accumulation GC-FID System in Urban Houston, Texas. Air and Waste Management Association 105th Annual Conference (2012), San Antonio, Texas.</div>
+      <div class="pub">20. <span class="highlight-name">Sri Harsha Kota</span>, Gunnar W. Schade, and Qi Ying. MOVES Versus MOBILE 6.2: Differences in Emission Factors and Regional Air Quality Predictions. The Transportation Research Board 91st Annual Meeting (2012), Washington, D.C.</div>
+      <div class="pub">21. <span class="highlight-name">Sri Harsha Kota</span>, Qi Ying and Yunlong Zhang. TAMNROM-3D: A Three-Dimensional Eulerian Model to Simulate Air Quality near Highways. The Transportation Research Board 89th Annual Meeting (2010), Washington, D.C.</div>
+    </div>
+    <button class="show-more-btn" onclick="toggleVisibility('more-conferences', this)">Show More</button>
+  </div>
 
-<div class="pub">
-4. Shubham Sharma et al. Action Plans to Reduce PM2.5 in Delhi-NCR. Aerosol and Air Quality Research.
-</div>
+  <hr>
 
-<div class="pub">
-5. Fenglin Han et al. Modeling polycyclic aromatic hydrocarbons in India. Environmental Research.
-</div>
+  <h2>Books / Book Chapters</h2>
+  <div class="pub">1. M.N. Rao, Razia Sultana and <span class="highlight-name">Sri Harsha Kota</span>. 2016. Solid and Hazardous Waste Management: Science and Engineering. 1st Edition. Elsevier.</div>
+  <div class="pub">2. Shubham Sharma and <span class="highlight-name">Sri Harsha Kota</span>. 2020. Integrated Risk of Pandemic: Covid-19 Impacts, Resilience and Recommendations. Springer.</div>
+  <div class="pub">3. Mukesh Khare, Prateek Sharma, <span class="highlight-name">Sri Harsha Kota</span>, Sumanth Chinthala. 2024. Air Pollution: Science, Engineering and Management Fundamentals. 1st Edition. CRC Press.</div>
 
-<div class="pub">
-6. Prashant Kumar et al. In-kitchen aerosol exposure in twelve cities. Environment International.
-</div>
+  <hr>
 
-<div class="pub">
-7. Mina Chandra et al. Air Pollution and Cognitive Impairment. IJERPH.
-</div>
-
-<div class="pub">
-8. Shubham Sharma et al. Transboundary PM2.5 in Bhutan. IJEST.
-</div>
-
-<div class="pub">
-9. Mengyuan Zhang et al. COVID-19 emission reduction impact in India. ACP.
-</div>
-
-<div class="pub">
-10. Shubham Sharma et al. Health Effects of PM2.5: A Review.
-</div>
-
-<div class="pub">
-11. Shubham Sharma et al. COVID-19 air quality impact. Science of Total Environment.
-</div>
-
-<div class="pub">
-12. Sahu et al. Power generation contribution to pollution. Journal of Cleaner Production.
-</div>
-
-<div class="pub">
-13. Garaga et al. Source Apportionment study. Chemosphere.
-</div>
-
-<div class="pub">
-14. Gao et al. PM2.5 health losses in China.
-</div>
-
-<div class="pub">
-15. Sahu et al. Satellite-based PM2.5 estimation in India.
-</div>
-
-<hr>
-
-<h2>Conference Publications</h2>
-
-<div class="pub">
-1. Kota S.H. et al. PM2.5 reduction strategies in Delhi-NCR. AGU Fall Meeting, 2019.
-</div>
-
-<div class="pub">
-2. Guo H. et al. Emission reduction effects in India. AGU Fall Meeting, 2019.
-</div>
-
-<div class="pub">
-3. Garaga R. et al. Source identification in Assam. AOGS, 2019.
-</div>
-
-<div class="pub">
-4. Sahu et al. PM2.5 estimation using AOD. AOGS, 2018.
-</div>
-
-<hr>
-
-<h2>Books / Book Chapters</h2>
-
-<div class="pub">
-1. Rao M.N., Sultana R., Kota S.H. Solid and Hazardous Waste Management. Elsevier, 2016.
-</div>
-
-<div class="pub">
-2. Sharma S., Kota S.H. Integrated Risk of Pandemic: Covid-19 Impacts. Springer, 2020.
-</div>
-
-<hr>
-
-<h2>Patents</h2>
-
-<div class="pub">
-1. Vertical Air Filtration Chamber – Indian Design (2020)
-</div>
-
-<div class="pub">
-2. Air Filtration Chamber – Indian Design (2020)
-</div>
-
-<div class="pub">
-3. Indoor Air Pollution Mitigator – Indian Design (2020)
-</div>
-
-<div class="pub">
-4. Moving Car Pollution Detection Device – Indian Design (2021)
-</div>
-
-<div class="pub">
-5. Test Chamber for Air Filters – Indian Patent (2021)
-</div>
-
-</div>
-</div>
-
-</div>
+  <h2>Granted Patents / Registered Designs</h2>
+  <div class="pub">1. Indian Design 318748-001: “Vertical Air Filtration Chamber”, 15th June 2020. (By <span class="highlight-name">Sri Harsha Kota</span>)</div>
+  <div class="pub">2. Indian Design 318749-001: “Air Filtration Chamber”, 19th August 2020. (By <span class="highlight-name">Sri Harsha Kota</span>)</div>
+  <div class="pub">3. Indian Design 318750-001: “Indoor Air Pollution Mitigator”, 26th February 2020. (By <span class="highlight-name">Sri Harsha Kota</span>)</div>
+  <div class="pub">4. Indian Design 347884-001: “Moving Car Pollution Detection Device”, 13th August 2021. (By <span class="highlight-name">Sri Harsha Kota</span>)</div>
+  <div class="pub">5. Kota, <span class="highlight-name">Sri Harsha</span>, Dhulipala, Sarma, Sridhar, Palaniswamy. 2021. “Test Chamber for Air Filters”. Indian Patent, 385706, filed 8th October 2020, and issued on 31st December 2021.</div>
 
 </div>
+
+</div>
+
+<script>
+  function toggleVisibility(id, btn) {
+    var elem = document.getElementById(id);
+    if (elem.style.display === "none" || elem.style.display === "") {
+      elem.style.display = "block";
+      btn.innerHTML = "Show Less";
+    } else {
+      elem.style.display = "none";
+      btn.innerHTML = "Show More";
+    }
+  }
+</script>
+
 </body>
 </html>

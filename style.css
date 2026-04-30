@@ -1,42 +1,37 @@
 /* ===== UNIFIED HEADER CSS ===== */
+
+/* 1. The Outer Wrapper: Spans 100% of the screen */
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 50;
-  width: 100%; /* Spans the full screen width */
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  z-index: 100;
+  width: 100%;
+  background: var(--surface-strong); /* Uses your existing variable */
   backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(0,0,0,0.05); /* Optional: subtle line at bottom */
+  border-bottom: 1px solid var(--line);
 }
 
+/* 2. The Inner Bar: Aligns with your page content */
 .header-bar {
   display: flex;
-  /* This pushes the logo to the left and nav to the right */
-  justify-content: space-between; 
+  justify-content: space-between; /* Logo left, Nav right */
   align-items: center;
   
-  /* Ensure it uses the full width available */
-  width: 100%;
-  max-width: 1200px; /* Or whatever width matches your design */
+  /* Use your existing container variable to match the rest of the page */
+  width: var(--container); 
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 16px 0; /* Vertical padding only, width is handled by var(--container) */
 }
 
 
 
+/* 4. Brand: Ensures it doesn't shrink */
 .brand {
-  display: flex;
-  flex-direction: column;
+  flex-shrink: 0;
 }
 
 .brand-kicker {
-  /* Keep your "one line" fix from before */
-  white-space: nowrap !important;
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 800;
+  white-space: nowrap !important; /* Force one line */
 }
 
 .brand-name {
@@ -45,16 +40,13 @@
   font-size: 1.4rem;
 }
 
+/* 3. The Navigation: Pushes everything to the right */
 .nav {
   display: flex;
-  gap: 15px; /* Adjust spacing between links as needed */
-  
-  /* This ensures the nav itself aligns its internal content to the right */
-  justify-content: flex-end; 
-  
-  /* This allows the nav to grow and take up the remaining space */
-  flex: 1; 
+  gap: 20px;
+  justify-content: flex-end;
 }
+
 .nav a {
   text-decoration: none;
   color: var(--muted);

@@ -3,20 +3,29 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  margin-bottom: 20px;
+  width: 100%; /* Spans the full screen width */
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
   backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(0,0,0,0.05); /* Optional: subtle line at bottom */
 }
 
 .header-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
-  padding: 12px 18px;
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
+  
+  /* CENTER THE CONTENT */
+  max-width: 1200px; /* Adjust this to match your preferred content width */
+  margin: 0 auto;    /* Centers the bar on the screen */
+  
+  padding: 12px 24px; /* Adds space on the left/right edges so it's not touching screen sides */
+  
+  /* Remove these if you want it to look like a flat bar instead of a bubble */
+  border-radius: 0; 
+  box-shadow: none; 
 }
+
+
 
 .brand {
   display: flex;
@@ -24,14 +33,13 @@
 }
 
 .brand-kicker {
+  /* Keep your "one line" fix from before */
+  white-space: nowrap !important;
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
   font-weight: 800;
-  
-  /* THIS IS THE FIX */
-  white-space: nowrap; 
 }
 
 .brand-name {

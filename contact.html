@@ -6,7 +6,7 @@
   <title>URAM-IITD | Contact</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
-
+  <link rel="stylesheet" href="style.css">
   <style>
     :root {
       --surface: rgba(255,255,255,0.9);
@@ -32,64 +32,9 @@
       padding:20px 0;
     }
 
-    /* ===== UPDATED HEADER ===== */
+   
 
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      margin-bottom: 20px;
-      backdrop-filter: blur(18px);
-    }
-
-    .header-bar {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:16px;
-      padding:12px 18px;
-      background:rgba(255,255,255,0.75);
-      border-radius:20px;
-      box-shadow:var(--shadow);
-    }
-
-    .brand {
-      display:flex;
-      flex-direction:column;
-    }
-
-    .brand-kicker {
-      font-size:0.7rem;
-      letter-spacing:0.2em;
-      text-transform:uppercase;
-      color:var(--accent);
-      font-weight:800;
-    }
-
-    .brand-name {
-      margin:0;
-      font-family:"Playfair Display",serif;
-      font-size:1.4rem;
-    }
-
-    .nav {
-      display:flex;
-      gap:8px;
-    }
-
-    .nav a {
-      text-decoration:none;
-      color:var(--muted);
-      padding:8px 12px;
-      border-radius:999px;
-      font-size:0.85rem;
-    }
-
-    .nav a.active,
-    .nav a:hover {
-      background:rgba(14,100,109,0.1);
-      color:var(--accent-deep);
-    }
+    
 
     /* MOBILE MENU */
     .menu-toggle {
@@ -178,36 +123,9 @@
 </head>
 
 <body>
+<div id="header-placeholder"></div>
 <div class="container">
 
-<!-- UPDATED HEADER -->
-<header class="site-header">
-  <div class="header-bar">
-
-    <div class="brand">
-      <span class="brand-kicker">IIT Delhi Research Group</span>
-      <p class="brand-name">URAM-IITD</p>
-    </div>
-
-    <button class="menu-toggle" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="nav" id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="publications.html">Publications</a>
-      <a href="members.html">Members</a>
-      <a href="collabrations.html">Collaborations</a>
-      <a href="current-openings.html">Current Openings</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-
-  </div>
-</header>
 
 <section class="section">
   <h1>Contact</h1>
@@ -215,7 +133,7 @@
   <p class="contact-text">
     <strong>Prof. Sri Harsha Kota</strong><br><br>
 
-    Department of Civil Engineering (Block V, Room 201)<br>
+    Department of Civil & Environmental Engineering (Block V, Room 201)<br>
     Indian Institute of Technology Delhi, New Delhi 110016 (India)<br><br>
 
     Phone: +91-11-2659-1208<br>
@@ -227,7 +145,7 @@
   <!-- Google Map -->
   <div class="map-container">
     <iframe 
-      src="https://www.google.com/maps?q=IIT%20Delhi&output=embed"
+      src="https://www.google.com/maps?q=28.5450,77.1926&z=17&output=embed">
       loading="lazy">
     </iframe>
   </div>
@@ -236,11 +154,7 @@
 
 </div>
 
-<script>
-function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
-}
-</script>
+<script src="components.js"></script>
 
 </body>
 </html>

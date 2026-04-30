@@ -18,7 +18,7 @@
   max-width: 1200px; /* Adjust this to match your preferred content width */
   margin: 0 auto;    /* Centers the bar on the screen */
   
-  padding: 12px 24px; /* Adds space on the left/right edges so it's not touching screen sides */
+  padding: 12px 2px; /* Adds space on the left/right edges so it's not touching screen sides */
   
   /* Remove these if you want it to look like a flat bar instead of a bubble */
   border-radius: 0; 

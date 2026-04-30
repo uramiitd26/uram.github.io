@@ -17,20 +17,20 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* Make links horizontal and remove underlines */
+/* Tell the logo area never to shrink or wrap *
+
+/* Slightly reduce the gap between nav links to make more room */
 .nav {
   display: flex;
-  gap: 12px;
+  gap: 10px; /* Reduced from 12px or 16px */
+  flex-wrap: nowrap;
 }
 
+/* Ensure individual links don't get too wide */
 .nav a {
-  text-decoration: none;
-  color: #5a6a70; /* Your --muted color */
-  padding: 8px 12px;
-  font-size: 0.85rem;
-  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
 }
-
 .nav a.active {
   background: rgba(14, 100, 109, 0.1);
   color: #0e646d; /* Your --accent color */
@@ -38,8 +38,8 @@
 }
 
 .brand {
-  display: flex;
-  flex-direction: column;
+  flex-shrink: 0;
+  min-width: fit-content;
 }
 
 .brand-kicker {

@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
   <style>
     :root {
       --bg: #f3efe8;
@@ -55,69 +56,7 @@
       padding: 24px 0 70px;
     }
 
-    /* ===== UPDATED HEADER ONLY ===== */
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  margin-bottom: 24px;
-  backdrop-filter: blur(18px);
-}
-
-.header-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 12px 18px;
-  background: rgba(255,255,255,0.72);
-  border: 1px solid rgba(255,255,255,0.7);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-}
-
-.brand {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.brand-kicker {
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 800;
-}
-
-.brand-name {
-  margin: 0;
-  font-family: "Playfair Display", serif;
-  font-size: 1.5rem;
-}
-
-/* NAV */
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.nav a {
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  color: var(--muted);
-  transition: 0.25s ease;
-  white-space: nowrap;
-}
-
-.nav a:hover,
-.nav a.active {
-  background: rgba(14,100,109,0.1);
-  color: var(--accent-deep);
-}
+   
 
 /* MOBILE MENU */
 .menu-toggle {
@@ -136,7 +75,7 @@
 }
 
 /* MOBILE */
-@media (max-width: 760px) {
+    @media (max-width: 760px) {
   .menu-toggle {
     display: flex;
   }
@@ -157,7 +96,6 @@
     display: flex;
   }
 }
-
     .hero {
       display: grid;
       grid-template-columns: minmax(320px, 0.92fr) minmax(340px, 1.08fr);
@@ -567,69 +505,12 @@
         justify-self: start;
       }
     }
-
-    @media (max-width: 760px) {
-      .page-shell {
-        width: min(100vw - 24px, 100%);
-        padding-top: 14px;
-      }
-
-      .header-bar,
-      .hero-copy,
-      .section-shell,
-      .member-row,
-      .contact-band {
-        padding: 22px;
-      }
-
-      .hero-media {
-        min-height: 420px;
-        padding: 18px;
-      }
-
-      .image-placeholder {
-        min-height: 380px;
-      }
-
-      .nav {
-        justify-content: flex-start;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-      }
-    }
-
-
-  <link rel="stylesheet" href="style.css">
   </style>
 </head>
 <body>
+  <div id="header-placeholder"></div>
   <div class="page-shell">
-    <header class="site-header">
-  <div class="header-bar">
-    <div class="brand">
-      <span class="brand-kicker">IIT Delhi Research Group</span>
-      <p class="brand-name">URAM-IITD</p>
-    </div>
-
-    <button class="menu-toggle" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="nav" id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="publications.html">Publications</a>
-      <a href="members.html">Members</a>
-      <a href="collabrations.html">Collaborations</a>
-      <a href="current-openings.html">Current Openings</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
+  
     <main>
       <section class="hero">
         <div class="hero-media reveal">
@@ -719,7 +600,7 @@
           <article class="member-row">
             <div class="member-visual">
               <div class="image-wrapper">
-                <img src="images/harsha_kota.jpg" alt="Prof. Sri Harsha Kota" class="member-img">
+                <img src="images/harsha_kota.jpeg" alt="Prof. Sri Harsha Kota" class="member-img">
               </div>
             </div>
             <div class="member-copy">
@@ -955,10 +836,7 @@
     </main>
   </div>
 
-<script>
-function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
-}
-</script>
+
+<script src="components.js"></script>
 </body>
 </html>

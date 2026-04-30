@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
   <style>
     :root {
       --bg: #f3efe8;
@@ -61,70 +62,7 @@
       padding: 24px 0 64px;
     }
 
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      margin-bottom: 24px;
-      backdrop-filter: blur(18px);
-    }
 
-    .header-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 12px 18px;
-      background: var(--surface);
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      min-width: fit-content;
-      flex-shrink: 0;
-    }
-
-    .brand-kicker {
-      font-size: 0.76rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 800;
-    }
-
-    .brand-name {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(1.5rem, 2vw, 2rem);
-      line-height: 1;
-      margin: 0;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .nav a {
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      color: var(--muted);
-      transition: 0.25s ease;
-      white-space: nowrap;
-    }
-
-    .nav a:hover,
-    .nav a:focus-visible {
-      background: rgba(14, 100, 109, 0.1);
-      color: var(--accent-deep);
-      outline: none;
-    }
 
     .hero {
       display: grid;
@@ -571,64 +509,6 @@
       }
     }
 
-    @media (max-width: 760px) {
-      .page-shell {
-        width: min(100vw - 24px, 100%);
-        padding-top: 14px;
-      }
-
-      .site-header {
-        margin-bottom: 16px;
-      }
-
-      .header-bar {
-        padding: 10px 14px;
-        flex-direction: row; 
-        align-items: center;
-      }
-
-      .brand-kicker {
-        font-size: 0.65rem;
-        letter-spacing: 0.15em;
-      }
-
-      .brand-name {
-        font-size: 1.2rem;
-      }
-
-      .nav {
-        justify-content: flex-start;
-        overflow-x: auto; 
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        max-width: 60%; 
-        mask-image: linear-gradient(to right, black 80%, transparent 100%);
-        padding-bottom: 4px; 
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      
-      .nav::-webkit-scrollbar {
-        display: none;
-      }
-
-      .hero-copy,
-      .content-card,
-      .leader-card,
-      .team-card,
-      .forecast-card {
-        padding: 22px;
-      }
-
-      .hero-media {
-        min-height: 420px;
-        padding: 18px;
-      }
-
-      .image-placeholder {
-        min-height: 380px;
-      }
-
       .interest-list {
         grid-template-columns: 1fr;
       }
@@ -636,26 +516,8 @@
   </style>
 </head>
 <body>
+  <div id="header-placeholder"></div>
   <div class="page-shell">
-    <header class="site-header">
-      <div class="header-bar">
-        <div class="brand">
-          <span class="brand-kicker">IIT Delhi Research Group</span>
-          <p class="brand-name">URAM-IITD</p>
-        </div>
-        <nav class="nav" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="teaching.html">Teaching</a>
-          <a href="publications.html">Publications</a>
-          <a href="members.html">Members</a>
-          <a href="collabrations.html">Collaborations</a>
-          <a href="current-openings.html">Current Openings</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
     <main>
       <section class="hero" id="home">
         <div class="hero-media reveal">
@@ -768,5 +630,7 @@
       </section>
     </main>
   </div>
+
+  <script src="components.js"></script>
 </body>
 </html>

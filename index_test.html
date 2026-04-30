@@ -1,145 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>URAM-IITD | Teaching</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>URAM-IITD | Contact</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-:root {
-  --bg:#f3efe8;
-  --surface:rgba(255,255,255,0.72);
-  --surface-strong:rgba(255,255,255,0.9);
-  --ink:#162126;
-  --muted:#5a6a70;
-  --accent:#0e646d;
-  --accent-deep:#0a4750;
-  --line:rgba(0,0,0,0.1);
-  --shadow:0 20px 60px rgba(0,0,0,0.1);
-}
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --surface: rgba(255,255,255,0.9);
+      --surface-strong: rgba(255,255,255,0.95);
+      --ink:#162126;
+      --muted:#5a6a70;
+      --accent:#0e646d;
+      --accent-deep:#0a4750;
+      --radius:24px;
+      --shadow:0 20px 60px rgba(0,0,0,0.1);
+    }
 
-body {
-  margin:0;
-  font-family:Manrope, sans-serif;
-  background:linear-gradient(180deg,#f8f5ef,#f2ede5);
-  color:var(--ink);
-}
+    body {
+      margin:0;
+      font-family:"Manrope",sans-serif;
+      background:#f5f2ea;
+      color:var(--ink);
+    }
 
-.page {
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
+    .container {
+      width:min(1100px,90%);
+      margin:auto;
+      padding:20px 0;
+    }
 
+   
 
+    
 
-/* SECTION */
-.section {
-  background:var(--surface-strong);
-  padding:25px;
-  border-radius:20px;
-  margin-bottom:25px;
-  box-shadow:var(--shadow);
-}
+    /* MOBILE MENU */
+    .menu-toggle {
+      display:none;
+      flex-direction:column;
+      gap:4px;
+      background:none;
+      border:none;
+      cursor:pointer;
+    }
 
-.section h2 {
-  text-align:center;
-  font-family:"Playfair Display";
-  margin-bottom:20px;
-  color:#6b7b63;
-}
+    .menu-toggle span {
+      width:22px;
+      height:2px;
+      background:var(--ink);
+      display:block;
+    }
 
-/* TABLE */
-table {
-  width:100%;
-  border-collapse:collapse;
-}
+    @media(max-width:768px){
+      .menu-toggle{
+        display:flex;
+      }
 
-th, td {
-  padding:12px;
-  border-bottom:1px solid var(--line);
-  text-align:left;
-}
+      .nav{
+        position:absolute;
+        top:70px;
+        right:20px;
+        background:var(--surface-strong);
+        flex-direction:column;
+        padding:14px;
+        border-radius:16px;
+        box-shadow:var(--shadow);
+        display:none;
+      }
 
-th {
-  color:var(--accent);
-  font-weight:700;
-}
+      .nav.show{
+        display:flex;
+      }
 
-td:first-child {
-  width:40px;
-}
+      h1{
+        font-size:2rem;
+      }
 
-/* MOBILE */
-@media(max-width:760px){
-  .header-bar {
-    padding:10px 14px;
-  }
+      iframe {
+        height:280px;
+      }
+    }
 
-  .nav {
-    max-width:60%;
-    scrollbar-width:none;
-  }
+    /* ===== ORIGINAL CONTENT (UNCHANGED) ===== */
 
-  .nav::-webkit-scrollbar {
-    display:none;
-  }
+    h1 {
+      font-family:"Playfair Display",serif;
+      font-size:2.5rem;
+      margin-bottom:20px;
+    }
 
-  table {
-    font-size:0.9rem;
-  }
-}
-</style>
+    .section {
+      background:var(--surface);
+      padding:30px;
+      border-radius:var(--radius);
+      margin-bottom:20px;
+    }
+
+    .contact-text {
+      line-height:1.8;
+      color:var(--muted);
+      font-size:1.05rem;
+    }
+
+    .contact-text strong {
+      color:var(--ink);
+    }
+
+    .map-container {
+      margin-top:20px;
+      border-radius:16px;
+      overflow:hidden;
+    }
+
+    iframe {
+      width:100%;
+      height:350px;
+      border:0;
+    }
+  </style>
 </head>
 
 <body>
 <div id="header-placeholder"></div>
-<div class="page">
-  
-<!-- IIT GUWAHATI -->
-<div class="section">
-  <h2>IIT Guwahati</h2>
+<div class="container">
 
-  <table>
-    <tr>
-      <th>#</th>
-      <th>Title of course taught</th>
-      <th>Year</th>
-    </tr>
 
-    <tr><td>1</td><td>Environmental Engineering-I</td><td>2015, 2018</td></tr>
-    <tr><td>2</td><td>Environmental Engineering Laboratory</td><td>2015</td></tr>
-    <tr><td>3</td><td>Air Pollution and Industrial Waste Management</td><td>2015, 2016</td></tr>
-    <tr><td>4</td><td>Air and Noise Pollution</td><td>2015, 2016</td></tr>
-    <tr><td>5</td><td>Air Quality Modeling</td><td>2016</td></tr>
-    <tr><td>6</td><td>Environmental Systems Engineering Laboratory</td><td>2017</td></tr>
-  </table>
-</div>
+<section class="section">
+  <h1>Contact</h1>
 
-<!-- IIT DELHI -->
-<div class="section">
-  <h2>IIT Delhi</h2>
+  <p class="contact-text">
+    <strong>Prof. Sri Harsha Kota</strong><br><br>
 
-  <table>
-    <tr>
-      <th>#</th>
-      <th>Title of course taught</th>
-      <th>Year</th>
-    </tr>
+    Department of Civil & Environmental Engineering (Block V, Room 201)<br>
+    Indian Institute of Technology Delhi, New Delhi 110016 (India)<br><br>
 
-    <tr><td>1</td><td>Environmental Science</td><td>2019, 2021</td></tr>
-    <tr><td>2</td><td>Air and Noise Pollution</td><td>2019, 2020, 2021</td></tr>
-    <tr><td>3</td><td>Air Pollution and Control</td><td>2019</td></tr>
-    <tr><td>4</td><td>Elements of Surveying</td><td>2019, 2020</td></tr>
-    <tr><td>5</td><td>Environmental Engineering</td><td>2020</td></tr>
-    <tr><td>6</td><td>Life Cycle Analysis and Design</td><td>2018</td></tr>
-  </table>
-</div>
+    Phone: +91-11-2659-1208<br>
+    Fax: (+91)-11-2658-1117<br><br>
+
+    Email: harshakota@iitd.ac.in
+  </p>
+
+  <!-- Google Map -->
+  <div class="map-container">
+    <iframe 
+      src=src="https://www.google.com/maps?q=G5WR%2BFFF%2C+IIT+Delhi%2C+Jia+Sarai%2C+New+Delhi%2C+Delhi+110016&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+
+</section>
 
 </div>
 
 <script src="components.js"></script>
+
 </body>
 </html>
